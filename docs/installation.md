@@ -16,15 +16,13 @@ composer require salines/cakephp-verification
 
 ## 2) Load the plugin
 
-```bash
-bin/cake plugin load Verification
-```
-
-This adds an entry to `config/plugins.php`. Alternatively, add it manually in
-`src/Application.php`:
+Add it manually in `src/Application.php`:
 
 ```php
-$this->addPlugin('CakeVerification');
+use CakeVerification\CakeVerificationPlugin;
+
+// in bootstrap():
+$this->addPlugin(CakeVerificationPlugin::class);
 ```
 
 ## 3) Publish config
