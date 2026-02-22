@@ -28,9 +28,9 @@ final class VerificationComponentChooseVerificationTest extends TestCase
      * Build a controller + component wired with the given request and mock service.
      *
      * @param \Cake\Http\ServerRequest $request
-     * @param \Verification\Service\VerificationServiceInterface&\PHPUnit\Framework\MockObject\MockObject $service
+     * @param \Salines\Verification\Service\VerificationServiceInterface&\PHPUnit\Framework\MockObject\MockObject $service
      * @param \Cake\ORM\Table|null $usersTable Optional stub table (needed for POST save path)
-     * @return \Verification\Controller\Component\VerificationComponent
+     * @return \Salines\Verification\Controller\Component\VerificationComponent
      */
     private function makeComponent(
         ServerRequest $request,
@@ -67,7 +67,7 @@ final class VerificationComponentChooseVerificationTest extends TestCase
      * Build a mock VerificationServiceInterface that reports the given available drivers.
      *
      * @param list<string> $drivers
-     * @return \Verification\Service\VerificationServiceInterface&\PHPUnit\Framework\MockObject\MockObject
+     * @return \Salines\Verification\Service\VerificationServiceInterface&\PHPUnit\Framework\MockObject\MockObject
      */
     private function makeService(array $drivers): VerificationServiceInterface&MockObject
     {

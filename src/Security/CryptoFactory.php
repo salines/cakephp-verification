@@ -24,7 +24,7 @@ final class CryptoFactory
      * Create a crypto driver from the Verification.crypto config array.
      *
      * @param array<string, mixed> $config
-     * @return \Verification\Security\CryptoInterface|null  null when crypto is not configured
+     * @return \Salines\Verification\Security\CryptoInterface|null  null when crypto is not configured
      */
     public static function create(array $config): ?CryptoInterface
     {

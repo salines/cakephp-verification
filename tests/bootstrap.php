@@ -24,7 +24,7 @@ if (file_exists($pluginVendorAutoload)) {
 }
 
 if (isset($loader) && $loader instanceof ClassLoader) {
-    $loader->addPsr4('Salines\\Verification\\Test\\', $pluginRoot . '/tests/');
+    $loader->addPsr4('Salines\\Salines\Verification\\Test\\', $pluginRoot . '/tests/');
 }
 
 if (!function_exists('env')) {

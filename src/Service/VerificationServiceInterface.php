@@ -24,7 +24,7 @@ interface VerificationServiceInterface
      * Identifies the current user (if any) from the request and determines pending steps.
      *
      * @param \Psr\Http\Message\ServerRequestInterface $request HTTP request
-     * @return \Verification\Value\VerificationResult Verification state (identity, pending steps, next route/URL)
+     * @return \Salines\Verification\Value\VerificationResult Verification state (identity, pending steps, next route/URL)
      */
     public function verify(ServerRequestInterface $request): VerificationResult;
 
@@ -46,7 +46,7 @@ interface VerificationServiceInterface
      * Resolve a verificator driver instance for a step.
      *
      * @param string $name Step name (e.g. "email_otp", "sms_otp", "totp")
-     * @return \Verification\Verificator\VerificationVerificatorInterface|null Driver instance or null if unmapped
+     * @return \Salines\Verification\Verificator\VerificationVerificatorInterface|null Driver instance or null if unmapped
      */
     public function getDriver(string $name): ?VerificationVerificatorInterface;
 

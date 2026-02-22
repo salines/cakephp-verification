@@ -12,7 +12,7 @@ use Salines\Verification\Verificator\Driver\SmsOtpVerificator;
 use function Cake\I18n\__d;
 
 /**
- * @covers \Verification\Verificator\Driver\SmsOtpVerificator
+ * @covers \Salines\Verification\Verificator\Driver\SmsOtpVerificator
  */
 final class SmsOtpVerificatorTest extends TestCase
 {

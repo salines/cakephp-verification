@@ -10,7 +10,7 @@ use Salines\Verification\Verificator\Driver\EmailVerifyVerificator;
 use function Cake\I18n\__d;
 
 /**
- * @covers \Verification\Verificator\Driver\EmailVerifyVerificator
+ * @covers \Salines\Verification\Verificator\Driver\EmailVerifyVerificator
  */
 final class EmailVerifyVerificatorTest extends TestCase
 {

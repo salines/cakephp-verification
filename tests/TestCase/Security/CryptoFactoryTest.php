@@ -9,7 +9,7 @@ use Salines\Verification\Security\Driver\AesGcmCrypto;
 use Salines\Verification\Security\Driver\SodiumCrypto;
 
 /**
- * @covers \Verification\Security\CryptoFactory
+ * @covers \Salines\Verification\Security\CryptoFactory
  */
 final class CryptoFactoryTest extends TestCase
 {

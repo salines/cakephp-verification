@@ -11,7 +11,7 @@ use Salines\Verification\Verificator\Driver\EmailOtpVerificator;
 use function Cake\I18n\__d;
 
 /**
- * @covers \Verification\Verificator\Driver\EmailOtpVerificator
+ * @covers \Salines\Verification\Verificator\Driver\EmailOtpVerificator
  */
 final class EmailOtpVerificatorTest extends TestCase
 {

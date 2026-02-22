@@ -119,7 +119,7 @@ class VerificationComponent extends Component
     }
 
     /**
-     * @param \Verification\Service\VerificationServiceInterface $service Service instance
+     * @param \Salines\Verification\Service\VerificationServiceInterface $service Service instance
      * @return void
      */
     public function setService(VerificationServiceInterface $service): void
@@ -128,7 +128,7 @@ class VerificationComponent extends Component
     }
 
     /**
-     * @return \Verification\Service\VerificationServiceInterface
+     * @return \Salines\Verification\Service\VerificationServiceInterface
      */
     public function getService(): VerificationServiceInterface
     {
@@ -150,7 +150,7 @@ class VerificationComponent extends Component
 
     /**
      * @param string $name Driver name
-     * @return \Verification\Verificator\VerificationVerificatorInterface|null
+     * @return \Salines\Verification\Verificator\VerificationVerificatorInterface|null
      */
     public function getDriver(string $name): ?VerificationVerificatorInterface
     {
@@ -207,7 +207,7 @@ class VerificationComponent extends Component
 
     /**
      * @param \Psr\Http\Message\ServerRequestInterface|null $request Request
-     * @return \Verification\Value\VerificationResult
+     * @return \Salines\Verification\Value\VerificationResult
      */
     public function result(?ServerRequestInterface $request = null): VerificationResult
     {
@@ -220,7 +220,7 @@ class VerificationComponent extends Component
      * Select verification step.
      *
      * @param string|null $step Step name
-     * @param \Verification\Value\VerificationResult $verification Result
+     * @param \Salines\Verification\Value\VerificationResult $verification Result
      * @return string
      */
     public function selectStep(?string $step, VerificationResult $verification): string
@@ -500,8 +500,8 @@ class VerificationComponent extends Component
      * Apply default OTP delivery callback.
      *
      * @param string $step Step name
-     * @param \Verification\Verificator\VerificationVerificatorInterface $driver Driver
-     * @return \Verification\Verificator\VerificationVerificatorInterface
+     * @param \Salines\Verification\Verificator\VerificationVerificatorInterface $driver Driver
+     * @return \Salines\Verification\Verificator\VerificationVerificatorInterface
      */
     private function applyDefaultOtpDelivery(
         string $step,
@@ -539,8 +539,8 @@ class VerificationComponent extends Component
     /**
      * Apply default email-verify delivery callback.
      *
-     * @param \Verification\Verificator\VerificationVerificatorInterface $driver Driver
-     * @return \Verification\Verificator\VerificationVerificatorInterface
+     * @param \Salines\Verification\Verificator\VerificationVerificatorInterface $driver Driver
+     * @return \Salines\Verification\Verificator\VerificationVerificatorInterface
      */
     private function applyDefaultEmailVerifyDelivery(
         VerificationVerificatorInterface $driver,
@@ -909,13 +909,7 @@ class VerificationComponent extends Component
         }
 
         $origData = $identity->getOriginalData();
-        if (is_object($origData)) {
-            $prefs = $origData->{$prefsField} ?? null;
-        } elseif (is_array($origData)) {
-            $prefs = $origData[$prefsField] ?? null;
-        } else {
-            $prefs = null;
-        }
+        $prefs = $origData[$prefsField] ?? null;
         if (is_string($prefs)) {
             $prefs = json_decode($prefs, true);
         }
@@ -1129,7 +1123,7 @@ class VerificationComponent extends Component
     /**
      * Get crypto driver.
      *
-     * @return \Verification\Security\CryptoInterface|null
+     * @return \Salines\Verification\Security\CryptoInterface|null
      */
     private function getCrypto(): ?CryptoInterface
     {

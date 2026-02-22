@@ -10,7 +10,7 @@ use Salines\Verification\Transport\Sms\Result;
 final class CaptureTransport extends DummyTransport
 {
     /**
-     * @var array<int, \Verification\Transport\Sms\Message>
+     * @var array<int, \Salines\Verification\Transport\Sms\Message>
      */
     public array $sent = [];
 

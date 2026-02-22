@@ -27,7 +27,7 @@ use function Cake\I18n\__d;
 final class SmsOtpVerificator extends AbstractOtpVerificator
 {
     /**
-     * @param \Verification\Transport\Sms\TransportInterface $transport SMS transport
+     * @param \Salines\Verification\Transport\Sms\TransportInterface $transport SMS transport
      * @param array<string, mixed> $config Config
      */
     public function __construct(

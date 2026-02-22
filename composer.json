@@ -30,7 +30,8 @@
     "scripts": {
         "test": "phpunit",
         "cs": "phpcs -p",
-        "cbf": "phpcbf"
+        "cbf": "phpcbf",
+        "stan": "phpstan analyse --memory-limit=512M"
     },
     "support": {
         "issues": "https://github.com/salines/cakephp-verification/issues",

@@ -10,7 +10,7 @@ use Salines\Verification\Verificator\Driver\TotpVerificator;
 use function Cake\I18n\__d;
 
 /**
- * @covers \Verification\Verificator\Driver\TotpVerificator
+ * @covers \Salines\Verification\Verificator\Driver\TotpVerificator
  */
 final class TotpVerificatorTest extends TestCase
 {

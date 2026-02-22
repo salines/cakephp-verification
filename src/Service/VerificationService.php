@@ -401,7 +401,7 @@ final class VerificationService implements VerificationServiceInterface
 
     /**
      * @param mixed $class
-     * @return class-string<\Verification\Verificator\VerificationVerificatorInterface>|null
+     * @return class-string<\Salines\Verification\Verificator\VerificationVerificatorInterface>|null
      */
     private function normalizeDriverClass(mixed $class): ?string
     {
@@ -446,7 +446,7 @@ final class VerificationService implements VerificationServiceInterface
     }
 
     /**
-     * @param class-string<\Verification\Verificator\VerificationVerificatorInterface> $class
+     * @param class-string<\Salines\Verification\Verificator\VerificationVerificatorInterface> $class
      * @param array<string, mixed> $config
      */
     private function instantiateDriver(string $class, array $config): VerificationVerificatorInterface
@@ -461,7 +461,7 @@ final class VerificationService implements VerificationServiceInterface
     }
 
     /**
-     * @return \Verification\Transport\Sms\TransportInterface
+     * @return \Salines\Verification\Transport\Sms\TransportInterface
      */
     private function createSmsTransport(): TransportInterface
     {
