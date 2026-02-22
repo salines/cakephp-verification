@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace Verification\Test\TestSuite\Stub;
+namespace Salines\Verification\Test\TestSuite\Stub;
 
-use Verification\Transport\Sms\Driver\DummyTransport;
+use Salines\Verification\Transport\Sms\Driver\DummyTransport;
 
 /**
  * Transport stub that accepts an $options array in its constructor,

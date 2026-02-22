@@ -1,13 +1,13 @@
 <?php
 declare(strict_types=1);
 
-namespace Verification\Test\TestCase\Value;
+namespace Salines\Verification\Test\TestCase\Value;
 
 use Cake\Http\ServerRequestFactory;
 use Cake\Routing\Router;
 use Cake\TestSuite\TestCase;
-use Verification\Test\TestSuite\Stub\IdentityStub;
-use Verification\Value\VerificationResult;
+use Salines\Verification\Test\TestSuite\Stub\IdentityStub;
+use Salines\Verification\Value\VerificationResult;
 
 final class VerificationResultTest extends TestCase
 {

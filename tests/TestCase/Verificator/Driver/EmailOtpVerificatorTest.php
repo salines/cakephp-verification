@@ -1,13 +1,13 @@
 <?php
 declare(strict_types=1);
 
-namespace Verification\Test\TestCase\Verificator\Driver;
+namespace Salines\Verification\Test\TestCase\Verificator\Driver;
 
 use Cake\TestSuite\TestCase;
 use Psr\Http\Message\ServerRequestInterface;
 use RuntimeException;
-use Verification\Test\TestSuite\Stub\IdentityStub;
-use Verification\Verificator\Driver\EmailOtpVerificator;
+use Salines\Verification\Test\TestSuite\Stub\IdentityStub;
+use Salines\Verification\Verificator\Driver\EmailOtpVerificator;
 use function Cake\I18n\__d;
 
 /**

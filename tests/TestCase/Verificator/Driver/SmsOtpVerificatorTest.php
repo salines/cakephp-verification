@@ -1,14 +1,14 @@
 <?php
 declare(strict_types=1);
 
-namespace Verification\Test\TestCase\Verificator\Driver;
+namespace Salines\Verification\Test\TestCase\Verificator\Driver;
 
 use Cake\TestSuite\TestCase;
 use Psr\Http\Message\ServerRequestInterface;
-use Verification\Test\TestSuite\Stub\CaptureTransport;
-use Verification\Test\TestSuite\Stub\IdentityStub;
-use Verification\Transport\Sms\TransportInterface;
-use Verification\Verificator\Driver\SmsOtpVerificator;
+use Salines\Verification\Test\TestSuite\Stub\CaptureTransport;
+use Salines\Verification\Test\TestSuite\Stub\IdentityStub;
+use Salines\Verification\Transport\Sms\TransportInterface;
+use Salines\Verification\Verificator\Driver\SmsOtpVerificator;
 use function Cake\I18n\__d;
 
 /**

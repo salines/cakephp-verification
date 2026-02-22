@@ -1,11 +1,11 @@
 <?php
 declare(strict_types=1);
 
-namespace Verification\Test\TestSuite\Stub;
+namespace Salines\Verification\Test\TestSuite\Stub;
 
-use Verification\Transport\Sms\Driver\DummyTransport;
-use Verification\Transport\Sms\Message;
-use Verification\Transport\Sms\Result;
+use Salines\Verification\Transport\Sms\Driver\DummyTransport;
+use Salines\Verification\Transport\Sms\Message;
+use Salines\Verification\Transport\Sms\Result;
 
 final class CaptureTransport extends DummyTransport
 {

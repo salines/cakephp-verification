@@ -1,11 +1,11 @@
 <?php
 declare(strict_types=1);
 
-namespace Verification\Security;
+namespace Salines\Verification\Security;
 
 use RuntimeException;
-use Verification\Security\Driver\AesGcmCrypto;
-use Verification\Security\Driver\SodiumCrypto;
+use Salines\Verification\Security\Driver\AesGcmCrypto;
+use Salines\Verification\Security\Driver\SodiumCrypto;
 use function Cake\I18n\__d;
 
 /**

@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Verification\Storage;
+namespace Salines\Verification\Storage;
 
 use Cake\Cache\Cache;
 use RuntimeException;

@@ -1,12 +1,12 @@
 <?php
 declare(strict_types=1);
 
-namespace Verification\Test\TestCase\Security;
+namespace Salines\Verification\Test\TestCase\Security;
 
 use Cake\TestSuite\TestCase;
-use Verification\Security\CryptoFactory;
-use Verification\Security\Driver\AesGcmCrypto;
-use Verification\Security\Driver\SodiumCrypto;
+use Salines\Verification\Security\CryptoFactory;
+use Salines\Verification\Security\Driver\AesGcmCrypto;
+use Salines\Verification\Security\Driver\SodiumCrypto;
 
 /**
  * @covers \Verification\Security\CryptoFactory

@@ -1,14 +1,14 @@
 <?php
 declare(strict_types=1);
 
-namespace Verification\Test\TestCase\Transport\Sms;
+namespace Salines\Verification\Test\TestCase\Transport\Sms;
 
 use InvalidArgumentException;
 use PHPUnit\Framework\TestCase;
-use Verification\Test\TestSuite\Stub\ConfigurableTransport;
-use Verification\Transport\Sms\Driver\DummyTransport;
-use Verification\Transport\Sms\TransportFactory;
-use Verification\Transport\Sms\TransportInterface;
+use Salines\Verification\Test\TestSuite\Stub\ConfigurableTransport;
+use Salines\Verification\Transport\Sms\Driver\DummyTransport;
+use Salines\Verification\Transport\Sms\TransportFactory;
+use Salines\Verification\Transport\Sms\TransportInterface;
 
 final class TransportFactoryTest extends TestCase
 {

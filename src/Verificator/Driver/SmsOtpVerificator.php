@@ -1,12 +1,12 @@
 <?php
 declare(strict_types=1);
 
-namespace Verification\Verificator\Driver;
+namespace Salines\Verification\Verificator\Driver;
 
 use Authentication\IdentityInterface;
 use Psr\Http\Message\ServerRequestInterface;
-use Verification\Transport\Sms\Message;
-use Verification\Transport\Sms\TransportInterface;
+use Salines\Verification\Transport\Sms\Message;
+use Salines\Verification\Transport\Sms\TransportInterface;
 use function Cake\I18n\__d;
 
 /**

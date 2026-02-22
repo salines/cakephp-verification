@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Verification\Security;
+namespace Salines\Verification\Security;
 
 /**
  * Interface for all crypto drivers.

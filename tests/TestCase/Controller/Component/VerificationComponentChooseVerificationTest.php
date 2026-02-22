@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Verification\Test\TestCase\Controller\Component;
+namespace Salines\Verification\Test\TestCase\Controller\Component;
 
 use Cake\Controller\ComponentRegistry;
 use Cake\Controller\Controller;
@@ -12,10 +12,10 @@ use Cake\ORM\Entity;
 use Cake\ORM\Table;
 use Cake\TestSuite\TestCase;
 use PHPUnit\Framework\MockObject\MockObject;
-use Verification\Controller\Component\VerificationComponent;
-use Verification\Service\VerificationServiceInterface;
-use Verification\Test\TestSuite\Stub\IdentityStub;
-use Verification\Value\VerificationResult;
+use Salines\Verification\Controller\Component\VerificationComponent;
+use Salines\Verification\Service\VerificationServiceInterface;
+use Salines\Verification\Test\TestSuite\Stub\IdentityStub;
+use Salines\Verification\Value\VerificationResult;
 
 /**
  * Tests for VerificationComponent::handleChooseVerification().

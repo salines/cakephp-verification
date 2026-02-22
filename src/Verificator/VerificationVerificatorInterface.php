@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Verification\Verificator;
+namespace Salines\Verification\Verificator;
 
 use Authentication\IdentityInterface;
 use Psr\Http\Message\ServerRequestInterface;

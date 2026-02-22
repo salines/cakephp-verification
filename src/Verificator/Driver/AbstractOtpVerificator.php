@@ -1,14 +1,14 @@
 <?php
 declare(strict_types=1);
 
-namespace Verification\Verificator\Driver;
+namespace Salines\Verification\Verificator\Driver;
 
 use Authentication\IdentityInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use RuntimeException;
-use Verification\Storage\CacheOtpStorage;
-use Verification\Storage\OtpStorageInterface;
-use Verification\Verificator\VerificationVerificatorInterface;
+use Salines\Verification\Storage\CacheOtpStorage;
+use Salines\Verification\Storage\OtpStorageInterface;
+use Salines\Verification\Verificator\VerificationVerificatorInterface;
 use function Cake\I18n\__d;
 
 abstract class AbstractOtpVerificator implements VerificationVerificatorInterface

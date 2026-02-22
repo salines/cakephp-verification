@@ -1,11 +1,11 @@
 <?php
 declare(strict_types=1);
 
-namespace Verification\Service;
+namespace Salines\Verification\Service;
 
 use Psr\Http\Message\ServerRequestInterface;
-use Verification\Value\VerificationResult;
-use Verification\Verificator\VerificationVerificatorInterface;
+use Salines\Verification\Value\VerificationResult;
+use Salines\Verification\Verificator\VerificationVerificatorInterface;
 
 /**
  * Contract for running post-authentication verification flows (Email OTP, SMS OTP, TOTP).

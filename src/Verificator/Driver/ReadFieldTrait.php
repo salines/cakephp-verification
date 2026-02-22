@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Verification\Verificator\Driver;
+namespace Salines\Verification\Verificator\Driver;
 
 use Authentication\IdentityInterface;
 

@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Verification\Controller\Component;
+namespace Salines\Verification\Controller\Component;
 
 use App\Mailer\UserMailer;
 use Authentication\Controller\Component\AuthenticationComponent;
@@ -21,12 +21,12 @@ use Cake\Routing\Router;
 use Cake\Utility\Inflector;
 use Psr\Http\Message\ServerRequestInterface;
 use RuntimeException;
-use Verification\Security\CryptoFactory;
-use Verification\Security\CryptoInterface;
-use Verification\Service\VerificationService;
-use Verification\Service\VerificationServiceInterface;
-use Verification\Value\VerificationResult;
-use Verification\Verificator\VerificationVerificatorInterface;
+use Salines\Verification\Security\CryptoFactory;
+use Salines\Verification\Security\CryptoInterface;
+use Salines\Verification\Service\VerificationService;
+use Salines\Verification\Service\VerificationServiceInterface;
+use Salines\Verification\Value\VerificationResult;
+use Salines\Verification\Verificator\VerificationVerificatorInterface;
 
 class VerificationComponent extends Component
 {

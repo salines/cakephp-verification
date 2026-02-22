@@ -1,11 +1,11 @@
 <?php
 declare(strict_types=1);
 
-namespace Verification\Test\TestSuite\Stub;
+namespace Salines\Verification\Test\TestSuite\Stub;
 
 use Authentication\IdentityInterface;
 use Psr\Http\Message\ServerRequestInterface;
-use Verification\Verificator\VerificationVerificatorInterface;
+use Salines\Verification\Verificator\VerificationVerificatorInterface;
 
 final class NeverVerifiedVerificator implements VerificationVerificatorInterface
 {

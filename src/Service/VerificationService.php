@@ -1,17 +1,17 @@
 <?php
 declare(strict_types=1);
 
-namespace Verification\Service;
+namespace Salines\Verification\Service;
 
 use Authentication\IdentityInterface;
 use Cake\Datasource\EntityInterface;
 use Cake\Utility\Inflector;
 use Psr\Http\Message\ServerRequestInterface;
-use Verification\Transport\Sms\TransportFactory;
-use Verification\Transport\Sms\TransportInterface;
-use Verification\Value\VerificationResult;
-use Verification\Verificator\Driver\SmsOtpVerificator;
-use Verification\Verificator\VerificationVerificatorInterface;
+use Salines\Verification\Transport\Sms\TransportFactory;
+use Salines\Verification\Transport\Sms\TransportInterface;
+use Salines\Verification\Value\VerificationResult;
+use Salines\Verification\Verificator\Driver\SmsOtpVerificator;
+use Salines\Verification\Verificator\VerificationVerificatorInterface;
 
 final class VerificationService implements VerificationServiceInterface
 {

@@ -10,12 +10,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Verification\\": "src/"
+            "Salines\\Verification\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Verification\\Test\\": "tests/"
+            "Salines\\Verification\\Test\\": "tests/"
         }
     },
     "suggest": {

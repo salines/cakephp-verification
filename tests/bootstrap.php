@@ -22,7 +22,7 @@ if (file_exists($pluginVendorAutoload)) {
 }
 
 if (isset($loader) && $loader instanceof ClassLoader) {
-    $loader->addPsr4('Verification\\Test\\', $pluginRoot . '/tests/');
+    $loader->addPsr4('Salines\\Verification\\Test\\', $pluginRoot . '/tests/');
 }
 
 if (!function_exists('env')) {
@@ -39,6 +39,9 @@ if (!function_exists('__')) {
 if (!defined('CONFIG')) {
     define('CONFIG', $pluginRoot . DIRECTORY_SEPARATOR . 'config' . DIRECTORY_SEPARATOR);
 }
+
+// Register plugin under its CakePHP name so Configure::load('Verification.verification') works
+\Cake\Core\Plugin::getCollection()->add(new \Salines\Verification\VerificationPlugin(['name' => 'Verification', 'path' => $pluginRoot . '/']));
 
 // Minimal Cake bootstrap for plugin tests
 require $pluginRoot . '/config/bootstrap.php';
