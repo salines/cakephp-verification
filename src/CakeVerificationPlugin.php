@@ -7,7 +7,7 @@ use Cake\Console\CommandCollection;
 use Cake\Core\BasePlugin;
 use CakeVerification\Command\InstallCommand;
 
-final class VerificationPlugin extends BasePlugin
+final class CakeVerificationPlugin extends BasePlugin
 {
     /**
      * Register console commands.
