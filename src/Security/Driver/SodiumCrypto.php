@@ -1,11 +1,11 @@
 <?php
 declare(strict_types=1);
 
-namespace Verification\Security\Driver;
+namespace CakeVerification\Security\Driver;
 
+use CakeVerification\Security\CryptoInterface;
+use CakeVerification\Security\KeyDecoderTrait;
 use RuntimeException;
-use Verification\Security\CryptoInterface;
-use Verification\Security\KeyDecoderTrait;
 use function Cake\I18n\__d;
 
 /**

@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Verification\Controller;
+namespace CakeVerification\Controller;
 
 use App\Controller\AppController as BaseController;
 

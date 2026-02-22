@@ -1,11 +1,11 @@
 <?php
 declare(strict_types=1);
 
-namespace Verification\Test\TestSuite\Http;
+namespace CakeVerification\Test\TestSuite\Http;
 
 use Authentication\IdentityInterface;
 use Cake\Http\ServerRequest;
-use Verification\Test\TestSuite\Stub\IdentityStub;
+use CakeVerification\Test\TestSuite\Stub\IdentityStub;
 
 trait ServerRequestFactoryTrait
 {

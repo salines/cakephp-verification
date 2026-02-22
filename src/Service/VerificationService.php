@@ -1,17 +1,17 @@
 <?php
 declare(strict_types=1);
 
-namespace Verification\Service;
+namespace CakeVerification\Service;
 
 use Authentication\IdentityInterface;
 use Cake\Datasource\EntityInterface;
 use Cake\Utility\Inflector;
+use CakeVerification\Transport\Sms\TransportFactory;
+use CakeVerification\Transport\Sms\TransportInterface;
+use CakeVerification\Value\VerificationResult;
+use CakeVerification\Verificator\Driver\SmsOtpVerificator;
+use CakeVerification\Verificator\VerificationVerificatorInterface;
 use Psr\Http\Message\ServerRequestInterface;
-use Verification\Transport\Sms\TransportFactory;
-use Verification\Transport\Sms\TransportInterface;
-use Verification\Value\VerificationResult;
-use Verification\Verificator\Driver\SmsOtpVerificator;
-use Verification\Verificator\VerificationVerificatorInterface;
 
 final class VerificationService implements VerificationServiceInterface
 {
@@ -401,7 +401,7 @@ final class VerificationService implements VerificationServiceInterface
 
     /**
      * @param mixed $class
-     * @return class-string<\Verification\Verificator\VerificationVerificatorInterface>|null
+     * @return class-string<\CakeVerification\Verificator\VerificationVerificatorInterface>|null
      */
     private function normalizeDriverClass(mixed $class): ?string
     {
@@ -446,7 +446,7 @@ final class VerificationService implements VerificationServiceInterface
     }
 
     /**
-     * @param class-string<\Verification\Verificator\VerificationVerificatorInterface> $class
+     * @param class-string<\CakeVerification\Verificator\VerificationVerificatorInterface> $class
      * @param array<string, mixed> $config
      */
     private function instantiateDriver(string $class, array $config): VerificationVerificatorInterface
@@ -461,7 +461,7 @@ final class VerificationService implements VerificationServiceInterface
     }
 
     /**
-     * @return \Verification\Transport\Sms\TransportInterface
+     * @return \CakeVerification\Transport\Sms\TransportInterface
      */
     private function createSmsTransport(): TransportInterface
     {

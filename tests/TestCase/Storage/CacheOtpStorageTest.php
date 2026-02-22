@@ -1,11 +1,11 @@
 <?php
 declare(strict_types=1);
 
-namespace Verification\Test\TestCase\Storage;
+namespace CakeVerification\Test\TestCase\Storage;
 
 use Cake\TestSuite\TestCase;
+use CakeVerification\Storage\CacheOtpStorage;
 use RuntimeException;
-use Verification\Storage\CacheOtpStorage;
 
 final class CacheOtpStorageTest extends TestCase
 {

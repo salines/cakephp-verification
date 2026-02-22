@@ -98,7 +98,7 @@ public function initialize(): void
 {
     parent::initialize();
     $this->loadComponent('Authentication.Authentication');
-    $this->loadComponent('Verification.Verification', ['requireVerified' => true]);
+    $this->loadComponent('CakeVerification.Verification', ['requireVerified' => true]);
     $this->Verification->allowUnverified(['login', 'logout', 'pending']);
 }
 ```

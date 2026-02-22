@@ -1,11 +1,11 @@
 <?php
 declare(strict_types=1);
 
-namespace Verification\Verificator\Driver;
+namespace CakeVerification\Verificator\Driver;
 
 use Authentication\IdentityInterface;
+use CakeVerification\Verificator\VerificationVerificatorInterface;
 use Psr\Http\Message\ServerRequestInterface;
-use Verification\Verificator\VerificationVerificatorInterface;
 use function Cake\I18n\__d;
 
 /**

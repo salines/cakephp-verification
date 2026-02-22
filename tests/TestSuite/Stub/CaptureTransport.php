@@ -1,16 +1,16 @@
 <?php
 declare(strict_types=1);
 
-namespace Verification\Test\TestSuite\Stub;
+namespace CakeVerification\Test\TestSuite\Stub;
 
-use Verification\Transport\Sms\Driver\DummyTransport;
-use Verification\Transport\Sms\Message;
-use Verification\Transport\Sms\Result;
+use CakeVerification\Transport\Sms\Driver\DummyTransport;
+use CakeVerification\Transport\Sms\Message;
+use CakeVerification\Transport\Sms\Result;
 
 final class CaptureTransport extends DummyTransport
 {
     /**
-     * @var array<int, \Verification\Transport\Sms\Message>
+     * @var array<int, \CakeVerification\Transport\Sms\Message>
      */
     public array $sent = [];
 

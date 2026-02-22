@@ -1,11 +1,11 @@
 <?php
 declare(strict_types=1);
 
-use Verification\Transport\Sms\Driver\DummyTransport;
-use Verification\Verificator\Driver\EmailOtpVerificator;
-use Verification\Verificator\Driver\EmailVerifyVerificator;
-use Verification\Verificator\Driver\SmsOtpVerificator;
-use Verification\Verificator\Driver\TotpVerificator;
+use CakeVerification\Transport\Sms\Driver\DummyTransport;
+use CakeVerification\Verificator\Driver\EmailOtpVerificator;
+use CakeVerification\Verificator\Driver\EmailVerifyVerificator;
+use CakeVerification\Verificator\Driver\SmsOtpVerificator;
+use CakeVerification\Verificator\Driver\TotpVerificator;
 
 /**
  * salines/verification — default configuration.

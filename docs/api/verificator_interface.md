@@ -10,7 +10,7 @@ If you need a custom step (e.g. backup codes, hardware key), implement this inte
 ## Interface
 
 ```php
-namespace Verification\Verificator;
+namespace CakeVerification\Verificator;
 
 use Authentication\IdentityInterface;
 use Psr\Http\Message\ServerRequestInterface;
@@ -54,7 +54,7 @@ namespace App\Verification;
 
 use Authentication\IdentityInterface;
 use Psr\Http\Message\ServerRequestInterface;
-use Verification\Verificator\VerificationVerificatorInterface;
+use CakeVerification\Verificator\VerificationVerificatorInterface;
 
 class BackupCodeVerificator implements VerificationVerificatorInterface
 {

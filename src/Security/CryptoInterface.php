@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Verification\Security;
+namespace CakeVerification\Security;
 
 /**
  * Interface for all crypto drivers.

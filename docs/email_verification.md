@@ -267,7 +267,7 @@ bundled templates:
 
 ```php
 $this->viewBuilder()
-     ->setPlugin('Verification')
+     ->setPlugin('CakeVerification')
      ->setTemplate('email_otp');
 ```
 

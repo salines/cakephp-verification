@@ -93,7 +93,7 @@ checking logs or the cache manually.
 ## Loading the helper manually
 
 The helper is auto-loaded by the plugin when you add
-`$this->loadComponent('Verification.Verification')` in `AppController`.
+`$this->loadComponent('CakeVerification.Verification')` in `AppController`.
 If you need it in a controller that does not load the component, load it
 explicitly in the view class:
 
@@ -102,7 +102,7 @@ explicitly in the view class:
 public function initialize(): void
 {
     parent::initialize();
-    $this->loadHelper('Verification.Verification');
+    $this->loadHelper('CakeVerification.Verification');
 }
 ```
 

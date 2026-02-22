@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Verification\View\Helper;
+namespace CakeVerification\View\Helper;
 
 use BaconQrCode\Renderer\Image\SvgImageBackEnd;
 use BaconQrCode\Renderer\ImageRenderer;
@@ -10,7 +10,7 @@ use BaconQrCode\Writer;
 use Cake\Cache\Cache;
 use Cake\Core\Configure;
 use Cake\View\Helper;
-use Verification\Transport\Sms\Message;
+use CakeVerification\Transport\Sms\Message;
 
 class VerificationHelper extends Helper
 {

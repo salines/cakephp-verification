@@ -10,7 +10,7 @@ $appConfig = (array)Configure::read('Verification');
 try {
     Configure::config('default', new PhpConfig());
     // Load plugin defaults (false = overwrite), then restore app overrides on top.
-    Configure::load('Verification.verification', 'default', false);
+    Configure::load('CakeVerification.verification', 'default', false);
 } catch (Exception $e) {
     exit($e->getMessage() . "\n");
 }

@@ -9,10 +9,10 @@ see [sms_verification.md](../sms_verification.md).
 
 ## TransportInterface
 
-Every SMS transport must implement `Verification\Transport\Sms\TransportInterface`:
+Every SMS transport must implement `CakeVerification\Transport\Sms\TransportInterface`:
 
 ```php
-namespace Verification\Transport\Sms;
+namespace CakeVerification\Transport\Sms;
 
 interface TransportInterface
 {
@@ -46,9 +46,9 @@ interface TransportInterface
 ```php
 namespace App\Sms;
 
-use Verification\Transport\Sms\Message;
-use Verification\Transport\Sms\Result;
-use Verification\Transport\Sms\TransportInterface;
+use CakeVerification\Transport\Sms\Message;
+use CakeVerification\Transport\Sms\Result;
+use CakeVerification\Transport\Sms\TransportInterface;
 
 class TwilioTransport implements TransportInterface
 {

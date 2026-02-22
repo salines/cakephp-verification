@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Verification\Value;
+namespace CakeVerification\Value;
 
 use Authentication\IdentityInterface;
 use Cake\Routing\Exception\MissingRouteException;

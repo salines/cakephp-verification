@@ -3,6 +3,7 @@
     "description": "Verification and step-up authentication for CakePHP 5: email verification links, Email OTP, SMS OTP, and TOTP.",
     "type": "cakephp-plugin",
     "license": "MIT",
+    "keywords": ["cakephp", "plugin", "verification", "authentication", "otp", "totp", "2fa", "mfa", "sms", "email"],
     "require": {
         "php": "^8.2",
         "cakephp/cakephp": "^5.3",
@@ -10,12 +11,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Verification\\": "src/"
+            "CakeVerification\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Verification\\Test\\": "tests/"
+            "CakeVerification\\Test\\": "tests/"
         }
     },
     "suggest": {
@@ -29,7 +30,8 @@
     "scripts": {
         "test": "phpunit",
         "cs": "phpcs -p",
-        "cbf": "phpcbf"
+        "cbf": "phpcbf",
+        "stan": "phpstan analyse --memory-limit=512M"
     },
     "support": {
         "issues": "https://github.com/salines/cakephp-verification/issues",
@@ -42,6 +44,9 @@
             "url": "https://www.paypal.me/paradzikn"
         }
     ],
+    "extra": {
+        "installer-name": "CakeVerification"
+    },
     "config": {
         "allow-plugins": {
             "dealerdirect/phpcodesniffer-composer-installer": true

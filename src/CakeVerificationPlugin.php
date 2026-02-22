@@ -1,13 +1,13 @@
 <?php
 declare(strict_types=1);
 
-namespace Verification;
+namespace CakeVerification;
 
 use Cake\Console\CommandCollection;
 use Cake\Core\BasePlugin;
-use Verification\Command\InstallCommand;
+use CakeVerification\Command\InstallCommand;
 
-final class VerificationPlugin extends BasePlugin
+final class CakeVerificationPlugin extends BasePlugin
 {
     /**
      * Register console commands.

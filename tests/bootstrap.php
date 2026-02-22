@@ -3,7 +3,9 @@ declare(strict_types=1);
 
 use Cake\Cache\Cache;
 use Cake\Core\Configure;
+use Cake\Core\Plugin;
 use Cake\Routing\Router;
+use CakeVerification\CakeVerificationPlugin;
 use Composer\Autoload\ClassLoader;
 
 $pluginRoot = dirname(__DIR__);
@@ -22,7 +24,7 @@ if (file_exists($pluginVendorAutoload)) {
 }
 
 if (isset($loader) && $loader instanceof ClassLoader) {
-    $loader->addPsr4('Verification\\Test\\', $pluginRoot . '/tests/');
+    $loader->addPsr4('CakeVerification\\Test\\', $pluginRoot . '/tests/');
 }
 
 if (!function_exists('env')) {
@@ -39,6 +41,9 @@ if (!function_exists('__')) {
 if (!defined('CONFIG')) {
     define('CONFIG', $pluginRoot . DIRECTORY_SEPARATOR . 'config' . DIRECTORY_SEPARATOR);
 }
+
+// Register plugin under its CakePHP name so Configure::load('Verification.verification') works
+Plugin::getCollection()->add(new CakeVerificationPlugin(['path' => $pluginRoot . '/']));
 
 // Minimal Cake bootstrap for plugin tests
 require $pluginRoot . '/config/bootstrap.php';

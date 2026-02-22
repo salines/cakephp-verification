@@ -1,17 +1,17 @@
 <?php
 declare(strict_types=1);
 
-namespace Verification\Test\TestCase\Verificator\Driver;
+namespace CakeVerification\Test\TestCase\Verificator\Driver;
 
 use Cake\TestSuite\TestCase;
+use CakeVerification\Test\TestSuite\Stub\IdentityStub;
+use CakeVerification\Verificator\Driver\EmailOtpVerificator;
 use Psr\Http\Message\ServerRequestInterface;
 use RuntimeException;
-use Verification\Test\TestSuite\Stub\IdentityStub;
-use Verification\Verificator\Driver\EmailOtpVerificator;
 use function Cake\I18n\__d;
 
 /**
- * @covers \Verification\Verificator\Driver\EmailOtpVerificator
+ * @covers \CakeVerification\Verificator\Driver\EmailOtpVerificator
  */
 final class EmailOtpVerificatorTest extends TestCase
 {

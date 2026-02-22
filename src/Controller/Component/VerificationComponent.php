@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Verification\Controller\Component;
+namespace CakeVerification\Controller\Component;
 
 use App\Mailer\UserMailer;
 use Authentication\Controller\Component\AuthenticationComponent;
@@ -19,14 +19,14 @@ use Cake\ORM\Table;
 use Cake\Routing\Exception\MissingRouteException;
 use Cake\Routing\Router;
 use Cake\Utility\Inflector;
+use CakeVerification\Security\CryptoFactory;
+use CakeVerification\Security\CryptoInterface;
+use CakeVerification\Service\VerificationService;
+use CakeVerification\Service\VerificationServiceInterface;
+use CakeVerification\Value\VerificationResult;
+use CakeVerification\Verificator\VerificationVerificatorInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use RuntimeException;
-use Verification\Security\CryptoFactory;
-use Verification\Security\CryptoInterface;
-use Verification\Service\VerificationService;
-use Verification\Service\VerificationServiceInterface;
-use Verification\Value\VerificationResult;
-use Verification\Verificator\VerificationVerificatorInterface;
 
 class VerificationComponent extends Component
 {
@@ -119,7 +119,7 @@ class VerificationComponent extends Component
     }
 
     /**
-     * @param \Verification\Service\VerificationServiceInterface $service Service instance
+     * @param \CakeVerification\Service\VerificationServiceInterface $service Service instance
      * @return void
      */
     public function setService(VerificationServiceInterface $service): void
@@ -128,7 +128,7 @@ class VerificationComponent extends Component
     }
 
     /**
-     * @return \Verification\Service\VerificationServiceInterface
+     * @return \CakeVerification\Service\VerificationServiceInterface
      */
     public function getService(): VerificationServiceInterface
     {
@@ -150,7 +150,7 @@ class VerificationComponent extends Component
 
     /**
      * @param string $name Driver name
-     * @return \Verification\Verificator\VerificationVerificatorInterface|null
+     * @return \CakeVerification\Verificator\VerificationVerificatorInterface|null
      */
     public function getDriver(string $name): ?VerificationVerificatorInterface
     {
@@ -207,7 +207,7 @@ class VerificationComponent extends Component
 
     /**
      * @param \Psr\Http\Message\ServerRequestInterface|null $request Request
-     * @return \Verification\Value\VerificationResult
+     * @return \CakeVerification\Value\VerificationResult
      */
     public function result(?ServerRequestInterface $request = null): VerificationResult
     {
@@ -220,7 +220,7 @@ class VerificationComponent extends Component
      * Select verification step.
      *
      * @param string|null $step Step name
-     * @param \Verification\Value\VerificationResult $verification Result
+     * @param \CakeVerification\Value\VerificationResult $verification Result
      * @return string
      */
     public function selectStep(?string $step, VerificationResult $verification): string
@@ -500,8 +500,8 @@ class VerificationComponent extends Component
      * Apply default OTP delivery callback.
      *
      * @param string $step Step name
-     * @param \Verification\Verificator\VerificationVerificatorInterface $driver Driver
-     * @return \Verification\Verificator\VerificationVerificatorInterface
+     * @param \CakeVerification\Verificator\VerificationVerificatorInterface $driver Driver
+     * @return \CakeVerification\Verificator\VerificationVerificatorInterface
      */
     private function applyDefaultOtpDelivery(
         string $step,
@@ -539,8 +539,8 @@ class VerificationComponent extends Component
     /**
      * Apply default email-verify delivery callback.
      *
-     * @param \Verification\Verificator\VerificationVerificatorInterface $driver Driver
-     * @return \Verification\Verificator\VerificationVerificatorInterface
+     * @param \CakeVerification\Verificator\VerificationVerificatorInterface $driver Driver
+     * @return \CakeVerification\Verificator\VerificationVerificatorInterface
      */
     private function applyDefaultEmailVerifyDelivery(
         VerificationVerificatorInterface $driver,
@@ -909,13 +909,7 @@ class VerificationComponent extends Component
         }
 
         $origData = $identity->getOriginalData();
-        if (is_object($origData)) {
-            $prefs = $origData->{$prefsField} ?? null;
-        } elseif (is_array($origData)) {
-            $prefs = $origData[$prefsField] ?? null;
-        } else {
-            $prefs = null;
-        }
+        $prefs = $origData[$prefsField] ?? null;
         if (is_string($prefs)) {
             $prefs = json_decode($prefs, true);
         }
@@ -1129,7 +1123,7 @@ class VerificationComponent extends Component
     /**
      * Get crypto driver.
      *
-     * @return \Verification\Security\CryptoInterface|null
+     * @return \CakeVerification\Security\CryptoInterface|null
      */
     private function getCrypto(): ?CryptoInterface
     {
