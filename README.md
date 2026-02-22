@@ -1,5 +1,7 @@
 # CakePHP Verification
 
+[![CI](https://github.com/salines/cakephp-verification/actions/workflows/ci.yml/badge.svg)](https://github.com/salines/cakephp-verification/actions/workflows/ci.yml)
+
 A CakePHP 5.x plugin for step-up verification and MFA: email verification links,
 Email OTP, SMS OTP, and TOTP (authenticator apps).
 
