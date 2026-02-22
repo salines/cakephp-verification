@@ -1,0 +1,74 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
+
+msgid "Additional verification is required to proceed."
+msgstr "继续操作需要额外验证。"
+
+msgid "Invalid transport definition: {0}"
+msgstr "无效的传输定义：{0}"
+
+msgid "Unknown transport: {0}"
+msgstr "未知的传输方式：{0}"
+
+msgid "OTP resend cooldown is active."
+msgstr "OTP 重发冷却中。"
+
+msgid "Identity key is missing for OTP storage."
+msgstr "缺少用于 OTP 存储的身份键。"
+
+msgid "Email One-Time Code"
+msgstr "邮件一次性验证码"
+
+msgid "SMS One-Time Code"
+msgstr "短信一次性验证码"
+
+msgid "Authenticator App (TOTP)"
+msgstr "认证应用（TOTP）"
+
+msgid "AesGcmCrypto requires a non-empty key."
+msgstr "AesGcmCrypto 需要非空密钥。"
+
+msgid "Invalid key length for AesGcmCrypto. Expected {0} bytes, got {1}."
+msgstr "AesGcmCrypto 密钥长度无效。期望 {0} 字节，得到 {1}。"
+
+msgid "Invalid IV length for AES-GCM."
+msgstr "AES-GCM 的 IV 长度无效。"
+
+msgid "Encryption failed using AesGcmCrypto."
+msgstr "使用 AesGcmCrypto 加密失败。"
+
+msgid "Invalid base64 payload for AesGcmCrypto."
+msgstr "AesGcmCrypto 的 base64 载荷无效。"
+
+msgid "Invalid payload size for AesGcmCrypto."
+msgstr "AesGcmCrypto 的载荷大小无效。"
+
+msgid "Decryption failed using AesGcmCrypto."
+msgstr "使用 AesGcmCrypto 解密失败。"
+
+msgid "OpenSSL cipher \"{0}\" is not supported."
+msgstr "不支持 OpenSSL 密码 \"{0}\"。"
+
+msgid "SodiumCrypto requires a non-empty key."
+msgstr "SodiumCrypto 需要非空密钥。"
+
+msgid "Invalid key length for SodiumCrypto. Expected {0} bytes, got {1}."
+msgstr "SodiumCrypto 密钥长度无效。期望 {0} 字节，得到 {1}。"
+
+msgid "Encryption failed using SodiumCrypto."
+msgstr "使用 SodiumCrypto 加密失败。"
+
+msgid "Invalid base64 payload for SodiumCrypto."
+msgstr "SodiumCrypto 的 base64 载荷无效。"
+
+msgid "Invalid payload size for SodiumCrypto."
+msgstr "SodiumCrypto 的载荷大小无效。"
+
+msgid "Decryption failed using SodiumCrypto."
+msgstr "使用 SodiumCrypto 解密失败。"
+
+msgid "Invalid base64 payload for Base64Crypto."
+msgstr "Base64Crypto 的 base64 载荷无效。"

@@ -1,0 +1,74 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+
+msgid "Additional verification is required to proceed."
+msgstr "続行するには追加の認証が必要です。"
+
+msgid "Invalid transport definition: {0}"
+msgstr "無効なトランスポート定義: {0}"
+
+msgid "Unknown transport: {0}"
+msgstr "不明なトランスポート: {0}"
+
+msgid "OTP resend cooldown is active."
+msgstr "OTP再送のクールダウン中です。"
+
+msgid "Identity key is missing for OTP storage."
+msgstr "OTP保存のための識別キーがありません。"
+
+msgid "Email One-Time Code"
+msgstr "メールのワンタイムコード"
+
+msgid "SMS One-Time Code"
+msgstr "SMSワンタイムコード"
+
+msgid "Authenticator App (TOTP)"
+msgstr "認証アプリ（TOTP）"
+
+msgid "AesGcmCrypto requires a non-empty key."
+msgstr "AesGcmCryptoには空でないキーが必要です。"
+
+msgid "Invalid key length for AesGcmCrypto. Expected {0} bytes, got {1}."
+msgstr "AesGcmCryptoのキー長が不正です。期待値 {0} バイト、実際 {1}。"
+
+msgid "Invalid IV length for AES-GCM."
+msgstr "AES-GCMのIV長が不正です。"
+
+msgid "Encryption failed using AesGcmCrypto."
+msgstr "AesGcmCryptoによる暗号化に失敗しました。"
+
+msgid "Invalid base64 payload for AesGcmCrypto."
+msgstr "AesGcmCryptoのbase64ペイロードが不正です。"
+
+msgid "Invalid payload size for AesGcmCrypto."
+msgstr "AesGcmCryptoのペイロードサイズが不正です。"
+
+msgid "Decryption failed using AesGcmCrypto."
+msgstr "AesGcmCryptoによる復号に失敗しました。"
+
+msgid "OpenSSL cipher \"{0}\" is not supported."
+msgstr "OpenSSL暗号 \"{0}\" はサポートされていません。"
+
+msgid "SodiumCrypto requires a non-empty key."
+msgstr "SodiumCryptoには空でないキーが必要です。"
+
+msgid "Invalid key length for SodiumCrypto. Expected {0} bytes, got {1}."
+msgstr "SodiumCryptoのキー長が不正です。期待値 {0} バイト、実際 {1}。"
+
+msgid "Encryption failed using SodiumCrypto."
+msgstr "SodiumCryptoによる暗号化に失敗しました。"
+
+msgid "Invalid base64 payload for SodiumCrypto."
+msgstr "SodiumCryptoのbase64ペイロードが不正です。"
+
+msgid "Invalid payload size for SodiumCrypto."
+msgstr "SodiumCryptoのペイロードサイズが不正です。"
+
+msgid "Decryption failed using SodiumCrypto."
+msgstr "SodiumCryptoによる復号に失敗しました。"
+
+msgid "Invalid base64 payload for Base64Crypto."
+msgstr "Base64Cryptoのbase64ペイロードが不正です。"

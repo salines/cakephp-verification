@@ -1,0 +1,50 @@
+{
+    "name": "salines/cakephp-verification",
+    "description": "Verification and step-up authentication for CakePHP 5: email verification links, Email OTP, SMS OTP, and TOTP.",
+    "type": "cakephp-plugin",
+    "license": "MIT",
+    "require": {
+        "php": "^8.2",
+        "cakephp/cakephp": "^5.3",
+        "cakephp/authentication": "^4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Verification\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Verification\\Test\\": "tests/"
+        }
+    },
+    "suggest": {
+        "bacon/bacon-qr-code": "Required to render TOTP QR codes as SVG via VerificationHelper::qrCode()"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^11.0",
+        "cakephp/cakephp-codesniffer": "^5.2",
+        "phpstan/phpstan": "^2.0"
+    },
+    "scripts": {
+        "test": "phpunit",
+        "cs": "phpcs -p",
+        "cbf": "phpcbf"
+    },
+    "support": {
+        "issues": "https://github.com/salines/cakephp-verification/issues",
+        "source": "https://github.com/salines/cakephp-verification",
+        "docs": "https://github.com/salines/cakephp-verification/tree/main/docs"
+    },
+    "funding": [
+        {
+            "type": "custom",
+            "url": "https://www.paypal.me/paradzikn"
+        }
+    ],
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    }
+}

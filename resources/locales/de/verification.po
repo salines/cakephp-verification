@@ -1,0 +1,74 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: de\n"
+
+msgid "Additional verification is required to proceed."
+msgstr "Zusätzliche Verifizierung ist erforderlich, um fortzufahren."
+
+msgid "Invalid transport definition: {0}"
+msgstr "Ungültige Transportdefinition: {0}"
+
+msgid "Unknown transport: {0}"
+msgstr "Unbekannter Transport: {0}"
+
+msgid "OTP resend cooldown is active."
+msgstr "Die OTP-Neusende-Sperre ist aktiv."
+
+msgid "Identity key is missing for OTP storage."
+msgstr "Identitätsschlüssel für OTP-Speicherung fehlt."
+
+msgid "Email One-Time Code"
+msgstr "E-Mail-Einmalcode"
+
+msgid "SMS One-Time Code"
+msgstr "SMS-Einmalcode"
+
+msgid "Authenticator App (TOTP)"
+msgstr "Authenticator-App (TOTP)"
+
+msgid "AesGcmCrypto requires a non-empty key."
+msgstr "AesGcmCrypto erfordert einen nicht leeren Schlüssel."
+
+msgid "Invalid key length for AesGcmCrypto. Expected {0} bytes, got {1}."
+msgstr "Ungültige Schlüssellänge für AesGcmCrypto. Erwartet {0} Bytes, erhalten {1}."
+
+msgid "Invalid IV length for AES-GCM."
+msgstr "Ungültige IV-Länge für AES-GCM."
+
+msgid "Encryption failed using AesGcmCrypto."
+msgstr "Verschlüsselung mit AesGcmCrypto fehlgeschlagen."
+
+msgid "Invalid base64 payload for AesGcmCrypto."
+msgstr "Ungültige Base64-Nutzlast für AesGcmCrypto."
+
+msgid "Invalid payload size for AesGcmCrypto."
+msgstr "Ungültige Nutzlastgröße für AesGcmCrypto."
+
+msgid "Decryption failed using AesGcmCrypto."
+msgstr "Entschlüsselung mit AesGcmCrypto fehlgeschlagen."
+
+msgid "OpenSSL cipher \"{0}\" is not supported."
+msgstr "OpenSSL-Cipher \"{0}\" wird nicht unterstützt."
+
+msgid "SodiumCrypto requires a non-empty key."
+msgstr "SodiumCrypto erfordert einen nicht leeren Schlüssel."
+
+msgid "Invalid key length for SodiumCrypto. Expected {0} bytes, got {1}."
+msgstr "Ungültige Schlüssellänge für SodiumCrypto. Erwartet {0} Bytes, erhalten {1}."
+
+msgid "Encryption failed using SodiumCrypto."
+msgstr "Verschlüsselung mit SodiumCrypto fehlgeschlagen."
+
+msgid "Invalid base64 payload for SodiumCrypto."
+msgstr "Ungültige Base64-Nutzlast für SodiumCrypto."
+
+msgid "Invalid payload size for SodiumCrypto."
+msgstr "Ungültige Nutzlastgröße für SodiumCrypto."
+
+msgid "Decryption failed using SodiumCrypto."
+msgstr "Entschlüsselung mit SodiumCrypto fehlgeschlagen."
+
+msgid "Invalid base64 payload for Base64Crypto."
+msgstr "Ungültige Base64-Nutzlast für Base64Crypto."

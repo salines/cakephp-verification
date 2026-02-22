@@ -1,0 +1,37 @@
+parameters:
+    level: 5
+    paths:
+        - src/
+    excludePaths:
+        - src/Controller/AppController.php
+    bootstrapFiles:
+        - vendor/autoload.php
+    ignoreErrors:
+        # CakePHP plugin - App classes don't exist in plugin context
+        - '#Instantiated class App\\Mailer\\UserMailer not found#'
+        - '#Call to method send\(\) on an unknown class App\\Mailer\\UserMailer#'
+
+        # CakePHP i18n function loaded at runtime
+        - '#Function __ not found#'
+
+        # CakePHP constant loaded at runtime
+        - '#Constant ROOT not found#'
+
+        # Optional dependency - BaconQrCode
+        - '#class BaconQrCode\\#'
+
+        # PHPDoc type certainty - false positives
+        - '#Strict comparison using [!=]== between .* will always evaluate to#'
+
+        # CakePHP Entity magic property access - EntityInterface does not declare dynamic properties
+        # but CakePHP Entity supports __get/__set for all columns including plugin-internal fields.
+        - '#Access to an undefined property Cake\\Datasource\\EntityInterface::\$email_verification_token#'
+        - '#Access to an undefined property Cake\\Datasource\\EntityInterface::\$_verification_login_required#'
+        - '#Access to an undefined property Cake\\Datasource\\EntityInterface::\$_verification_login_code_sent#'
+        - '#Access to an undefined property Cake\\Datasource\\EntityInterface::\$_verification_login_triggered_id#'
+
+        # Dynamic object property access via getOriginalData() which returns mixed narrowed to object.
+        # These properties are plugin-internal state flags set on CakePHP Entity objects at runtime.
+        - '#Access to an undefined property ArrayAccess::\$_verification_login_required#'
+        - '#Access to an undefined property ArrayAccess::\$_verification_login_code_sent#'
+        - '#Access to an undefined property ArrayAccess::\$_verification_login_triggered_id#'

@@ -1,0 +1,74 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: hr\n"
+
+msgid "Additional verification is required to proceed."
+msgstr "Potrebna je dodatna verifikacija za nastavak."
+
+msgid "Invalid transport definition: {0}"
+msgstr "Neispravna definicija transporta: {0}"
+
+msgid "Unknown transport: {0}"
+msgstr "Nepoznat transport: {0}"
+
+msgid "OTP resend cooldown is active."
+msgstr "OTP cooldown za ponovno slanje je aktivan."
+
+msgid "Identity key is missing for OTP storage."
+msgstr "Nedostaje identitetski kljuc za OTP pohranu."
+
+msgid "Email One-Time Code"
+msgstr "Email jednokratni kod"
+
+msgid "SMS One-Time Code"
+msgstr "SMS jednokratni kod"
+
+msgid "Authenticator App (TOTP)"
+msgstr "Authenticator aplikacija (TOTP)"
+
+msgid "AesGcmCrypto requires a non-empty key."
+msgstr "AesGcmCrypto zahtijeva ne-prazan kljuc."
+
+msgid "Invalid key length for AesGcmCrypto. Expected {0} bytes, got {1}."
+msgstr "Neispravna duljina kljuca za AesGcmCrypto. Ocekivano {0} bajtova, dobiveno {1}."
+
+msgid "Invalid IV length for AES-GCM."
+msgstr "Neispravna duljina IV za AES-GCM."
+
+msgid "Encryption failed using AesGcmCrypto."
+msgstr "Enkripcija nije uspjela koristeci AesGcmCrypto."
+
+msgid "Invalid base64 payload for AesGcmCrypto."
+msgstr "Neispravan base64 payload za AesGcmCrypto."
+
+msgid "Invalid payload size for AesGcmCrypto."
+msgstr "Neispravna velicina payload-a za AesGcmCrypto."
+
+msgid "Decryption failed using AesGcmCrypto."
+msgstr "Dekripcija nije uspjela koristeci AesGcmCrypto."
+
+msgid "OpenSSL cipher \"{0}\" is not supported."
+msgstr "OpenSSL cipher \"{0}\" nije podrzan."
+
+msgid "SodiumCrypto requires a non-empty key."
+msgstr "SodiumCrypto zahtijeva ne-prazan kljuc."
+
+msgid "Invalid key length for SodiumCrypto. Expected {0} bytes, got {1}."
+msgstr "Neispravna duljina kljuca za SodiumCrypto. Ocekivano {0} bajtova, dobiveno {1}."
+
+msgid "Encryption failed using SodiumCrypto."
+msgstr "Enkripcija nije uspjela koristeci SodiumCrypto."
+
+msgid "Invalid base64 payload for SodiumCrypto."
+msgstr "Neispravan base64 payload za SodiumCrypto."
+
+msgid "Invalid payload size for SodiumCrypto."
+msgstr "Neispravna velicina payload-a za SodiumCrypto."
+
+msgid "Decryption failed using SodiumCrypto."
+msgstr "Dekripcija nije uspjela koristeci SodiumCrypto."
+
+msgid "Invalid base64 payload for Base64Crypto."
+msgstr "Neispravan base64 payload za Base64Crypto."

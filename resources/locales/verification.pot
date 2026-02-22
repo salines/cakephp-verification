@@ -1,0 +1,74 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+
+msgid "Additional verification is required to proceed."
+msgstr ""
+
+msgid "Invalid transport definition: {0}"
+msgstr ""
+
+msgid "Unknown transport: {0}"
+msgstr ""
+
+msgid "OTP resend cooldown is active."
+msgstr ""
+
+msgid "Identity key is missing for OTP storage."
+msgstr ""
+
+msgid "Email One-Time Code"
+msgstr ""
+
+msgid "SMS One-Time Code"
+msgstr ""
+
+msgid "Authenticator App (TOTP)"
+msgstr ""
+
+msgid "AesGcmCrypto requires a non-empty key."
+msgstr ""
+
+msgid "Invalid key length for AesGcmCrypto. Expected {0} bytes, got {1}."
+msgstr ""
+
+msgid "Invalid IV length for AES-GCM."
+msgstr ""
+
+msgid "Encryption failed using AesGcmCrypto."
+msgstr ""
+
+msgid "Invalid base64 payload for AesGcmCrypto."
+msgstr ""
+
+msgid "Invalid payload size for AesGcmCrypto."
+msgstr ""
+
+msgid "Decryption failed using AesGcmCrypto."
+msgstr ""
+
+msgid "OpenSSL cipher \"{0}\" is not supported."
+msgstr ""
+
+msgid "SodiumCrypto requires a non-empty key."
+msgstr ""
+
+msgid "Invalid key length for SodiumCrypto. Expected {0} bytes, got {1}."
+msgstr ""
+
+msgid "Encryption failed using SodiumCrypto."
+msgstr ""
+
+msgid "Invalid base64 payload for SodiumCrypto."
+msgstr ""
+
+msgid "Invalid payload size for SodiumCrypto."
+msgstr ""
+
+msgid "Decryption failed using SodiumCrypto."
+msgstr ""
+
+msgid "Invalid base64 payload for Base64Crypto."
+msgstr ""

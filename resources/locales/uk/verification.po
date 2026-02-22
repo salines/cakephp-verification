@@ -1,0 +1,74 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: uk\n"
+
+msgid "Additional verification is required to proceed."
+msgstr "Для продовження потрібна додаткова перевірка."
+
+msgid "Invalid transport definition: {0}"
+msgstr "Невірне визначення транспорту: {0}"
+
+msgid "Unknown transport: {0}"
+msgstr "Невідомий транспорт: {0}"
+
+msgid "OTP resend cooldown is active."
+msgstr "Активна затримка повторного надсилання OTP."
+
+msgid "Identity key is missing for OTP storage."
+msgstr "Відсутній ключ ідентичності для зберігання OTP."
+
+msgid "Email One-Time Code"
+msgstr "Одноразовий код електронної пошти"
+
+msgid "SMS One-Time Code"
+msgstr "Одноразовий SMS‑код"
+
+msgid "Authenticator App (TOTP)"
+msgstr "Автентифікатор (TOTP)"
+
+msgid "AesGcmCrypto requires a non-empty key."
+msgstr "AesGcmCrypto потребує непорожній ключ."
+
+msgid "Invalid key length for AesGcmCrypto. Expected {0} bytes, got {1}."
+msgstr "Невірна довжина ключа для AesGcmCrypto. Очікується {0} байтів, отримано {1}."
+
+msgid "Invalid IV length for AES-GCM."
+msgstr "Невірна довжина IV для AES-GCM."
+
+msgid "Encryption failed using AesGcmCrypto."
+msgstr "Шифрування з AesGcmCrypto не вдалося."
+
+msgid "Invalid base64 payload for AesGcmCrypto."
+msgstr "Невірне base64‑навантаження для AesGcmCrypto."
+
+msgid "Invalid payload size for AesGcmCrypto."
+msgstr "Невірний розмір навантаження для AesGcmCrypto."
+
+msgid "Decryption failed using AesGcmCrypto."
+msgstr "Дешифрування з AesGcmCrypto не вдалося."
+
+msgid "OpenSSL cipher \"{0}\" is not supported."
+msgstr "Шифр OpenSSL \"{0}\" не підтримується."
+
+msgid "SodiumCrypto requires a non-empty key."
+msgstr "SodiumCrypto потребує непорожній ключ."
+
+msgid "Invalid key length for SodiumCrypto. Expected {0} bytes, got {1}."
+msgstr "Невірна довжина ключа для SodiumCrypto. Очікується {0} байтів, отримано {1}."
+
+msgid "Encryption failed using SodiumCrypto."
+msgstr "Шифрування з SodiumCrypto не вдалося."
+
+msgid "Invalid base64 payload for SodiumCrypto."
+msgstr "Невірне base64‑навантаження для SodiumCrypto."
+
+msgid "Invalid payload size for SodiumCrypto."
+msgstr "Невірний розмір навантаження для SodiumCrypto."
+
+msgid "Decryption failed using SodiumCrypto."
+msgstr "Дешифрування з SodiumCrypto не вдалося."
+
+msgid "Invalid base64 payload for Base64Crypto."
+msgstr "Невірне base64‑навантаження для Base64Crypto."

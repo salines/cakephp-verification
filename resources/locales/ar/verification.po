@@ -1,0 +1,74 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ar\n"
+
+msgid "Additional verification is required to proceed."
+msgstr "يلزم تحقق إضافي للمتابعة."
+
+msgid "Invalid transport definition: {0}"
+msgstr "تعريف النقل غير صالح: {0}"
+
+msgid "Unknown transport: {0}"
+msgstr "نقل غير معروف: {0}"
+
+msgid "OTP resend cooldown is active."
+msgstr "فترة الانتظار لإعادة إرسال OTP فعالة."
+
+msgid "Identity key is missing for OTP storage."
+msgstr "مفتاح الهوية مفقود لتخزين OTP."
+
+msgid "Email One-Time Code"
+msgstr "رمز بريد إلكتروني لمرة واحدة"
+
+msgid "SMS One-Time Code"
+msgstr "رمز SMS لمرة واحدة"
+
+msgid "Authenticator App (TOTP)"
+msgstr "تطبيق المصادقة (TOTP)"
+
+msgid "AesGcmCrypto requires a non-empty key."
+msgstr "يتطلب AesGcmCrypto مفتاحًا غير فارغ."
+
+msgid "Invalid key length for AesGcmCrypto. Expected {0} bytes, got {1}."
+msgstr "طول مفتاح غير صالح لـ AesGcmCrypto. المتوقع {0} بايت، تم الحصول على {1}."
+
+msgid "Invalid IV length for AES-GCM."
+msgstr "طول IV غير صالح لـ AES-GCM."
+
+msgid "Encryption failed using AesGcmCrypto."
+msgstr "فشل التشفير باستخدام AesGcmCrypto."
+
+msgid "Invalid base64 payload for AesGcmCrypto."
+msgstr "حمولة base64 غير صالحة لـ AesGcmCrypto."
+
+msgid "Invalid payload size for AesGcmCrypto."
+msgstr "حجم الحمولة غير صالح لـ AesGcmCrypto."
+
+msgid "Decryption failed using AesGcmCrypto."
+msgstr "فشل فك التشفير باستخدام AesGcmCrypto."
+
+msgid "OpenSSL cipher \"{0}\" is not supported."
+msgstr "شفرة OpenSSL \"{0}\" غير مدعومة."
+
+msgid "SodiumCrypto requires a non-empty key."
+msgstr "يتطلب SodiumCrypto مفتاحًا غير فارغ."
+
+msgid "Invalid key length for SodiumCrypto. Expected {0} bytes, got {1}."
+msgstr "طول مفتاح غير صالح لـ SodiumCrypto. المتوقع {0} بايت، تم الحصول على {1}."
+
+msgid "Encryption failed using SodiumCrypto."
+msgstr "فشل التشفير باستخدام SodiumCrypto."
+
+msgid "Invalid base64 payload for SodiumCrypto."
+msgstr "حمولة base64 غير صالحة لـ SodiumCrypto."
+
+msgid "Invalid payload size for SodiumCrypto."
+msgstr "حجم الحمولة غير صالح لـ SodiumCrypto."
+
+msgid "Decryption failed using SodiumCrypto."
+msgstr "فشل فك التشفير باستخدام SodiumCrypto."
+
+msgid "Invalid base64 payload for Base64Crypto."
+msgstr "حمولة base64 غير صالحة لـ Base64Crypto."
