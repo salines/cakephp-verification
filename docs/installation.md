@@ -24,7 +24,7 @@ This adds an entry to `config/plugins.php`. Alternatively, add it manually in
 `src/Application.php`:
 
 ```php
-$this->addPlugin('Verification');
+$this->addPlugin('CakeVerification');
 ```
 
 ## 3) Publish config
@@ -45,7 +45,7 @@ public function initialize(): void
     parent::initialize();
     $this->loadComponent('Flash');
     $this->loadComponent('Authentication.Authentication');
-    $this->loadComponent('Verification.Verification');
+    $this->loadComponent('CakeVerification.Verification');
 }
 ```
 

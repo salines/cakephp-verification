@@ -47,7 +47,7 @@ return [
             'defaultTransport' => 'dummy',
             'transports' => [
                 'dummy' => [
-                    'className' => \Verification\Transport\Sms\Driver\DummyTransport::class,
+                    'className' => \CakeVerification\Transport\Sms\Driver\DummyTransport::class,
                 ],
             ],
         ],
@@ -88,7 +88,7 @@ public function initialize(): void
 {
     parent::initialize();
     $this->loadComponent('Authentication.Authentication');
-    $this->loadComponent('Verification.Verification', ['requireVerified' => true]);
+    $this->loadComponent('CakeVerification.Verification', ['requireVerified' => true]);
     $this->Verification->allowUnverified(['login', 'logout', 'pending']);
 }
 ```
@@ -170,14 +170,14 @@ if (\Cake\Core\Configure::read('debug')) {
 
 ### Custom transport
 
-Implement `Verification\Transport\Sms\TransportInterface`:
+Implement `CakeVerification\Transport\Sms\TransportInterface`:
 
 ```php
 namespace App\Sms;
 
-use Verification\Transport\Sms\Message;
-use Verification\Transport\Sms\Result;
-use Verification\Transport\Sms\TransportInterface;
+use CakeVerification\Transport\Sms\Message;
+use CakeVerification\Transport\Sms\Result;
+use CakeVerification\Transport\Sms\TransportInterface;
 
 final class TwilioTransport implements TransportInterface
 {

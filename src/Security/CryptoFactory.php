@@ -1,11 +1,11 @@
 <?php
 declare(strict_types=1);
 
-namespace Salines\Verification\Security;
+namespace CakeVerification\Security;
 
+use CakeVerification\Security\Driver\AesGcmCrypto;
+use CakeVerification\Security\Driver\SodiumCrypto;
 use RuntimeException;
-use Salines\Verification\Security\Driver\AesGcmCrypto;
-use Salines\Verification\Security\Driver\SodiumCrypto;
 use function Cake\I18n\__d;
 
 /**
@@ -24,7 +24,7 @@ final class CryptoFactory
      * Create a crypto driver from the Verification.crypto config array.
      *
      * @param array<string, mixed> $config
-     * @return \Salines\Verification\Security\CryptoInterface|null  null when crypto is not configured
+     * @return \CakeVerification\Security\CryptoInterface|null  null when crypto is not configured
      */
     public static function create(array $config): ?CryptoInterface
     {

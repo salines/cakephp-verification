@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Salines\Verification\Transport\Sms;
+namespace CakeVerification\Transport\Sms;
 
 class Result
 {

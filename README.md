@@ -106,7 +106,7 @@ public function initialize(): void
     parent::initialize();
     $this->loadComponent('Flash');
     $this->loadComponent('Authentication.Authentication');
-    $this->loadComponent('Verification.Verification');
+    $this->loadComponent('CakeVerification.Verification');
 }
 ```
 

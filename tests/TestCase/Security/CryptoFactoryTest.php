@@ -1,15 +1,15 @@
 <?php
 declare(strict_types=1);
 
-namespace Salines\Verification\Test\TestCase\Security;
+namespace CakeVerification\Test\TestCase\Security;
 
 use Cake\TestSuite\TestCase;
-use Salines\Verification\Security\CryptoFactory;
-use Salines\Verification\Security\Driver\AesGcmCrypto;
-use Salines\Verification\Security\Driver\SodiumCrypto;
+use CakeVerification\Security\CryptoFactory;
+use CakeVerification\Security\Driver\AesGcmCrypto;
+use CakeVerification\Security\Driver\SodiumCrypto;
 
 /**
- * @covers \Salines\Verification\Security\CryptoFactory
+ * @covers \CakeVerification\Security\CryptoFactory
  */
 final class CryptoFactoryTest extends TestCase
 {

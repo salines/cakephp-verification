@@ -1,13 +1,13 @@
 <?php
 declare(strict_types=1);
 
-namespace Salines\Verification\Command;
+namespace CakeVerification\Command;
 
 use Cake\Command\Command;
 use Cake\Console\Arguments;
 use Cake\Console\ConsoleIo;
 use Cake\Console\ConsoleOptionParser;
-use Salines\Verification\Security\CryptoFactory;
+use CakeVerification\Security\CryptoFactory;
 use Throwable;
 
 final class InstallCommand extends Command

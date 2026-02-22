@@ -1,11 +1,11 @@
 <?php
 declare(strict_types=1);
 
-namespace Salines\Verification;
+namespace CakeVerification;
 
 use Cake\Console\CommandCollection;
 use Cake\Core\BasePlugin;
-use Salines\Verification\Command\InstallCommand;
+use CakeVerification\Command\InstallCommand;
 
 final class VerificationPlugin extends BasePlugin
 {

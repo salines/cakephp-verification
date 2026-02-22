@@ -5,8 +5,8 @@ use Cake\Cache\Cache;
 use Cake\Core\Configure;
 use Cake\Core\Plugin;
 use Cake\Routing\Router;
+use CakeVerification\VerificationPlugin;
 use Composer\Autoload\ClassLoader;
-use Salines\Verification\VerificationPlugin;
 
 $pluginRoot = dirname(__DIR__);
 $rootVendorAutoload = dirname($pluginRoot, 2) . '/vendor/autoload.php';
@@ -24,7 +24,7 @@ if (file_exists($pluginVendorAutoload)) {
 }
 
 if (isset($loader) && $loader instanceof ClassLoader) {
-    $loader->addPsr4('Salines\\Salines\Verification\\Test\\', $pluginRoot . '/tests/');
+    $loader->addPsr4('CakeVerification\\Test\\', $pluginRoot . '/tests/');
 }
 
 if (!function_exists('env')) {
@@ -43,7 +43,7 @@ if (!defined('CONFIG')) {
 }
 
 // Register plugin under its CakePHP name so Configure::load('Verification.verification') works
-Plugin::getCollection()->add(new VerificationPlugin(['name' => 'Verification', 'path' => $pluginRoot . '/']));
+Plugin::getCollection()->add(new VerificationPlugin(['name' => 'CakeVerification', 'path' => $pluginRoot . '/']));
 
 // Minimal Cake bootstrap for plugin tests
 require $pluginRoot . '/config/bootstrap.php';

@@ -1,11 +1,11 @@
 <?php
 declare(strict_types=1);
 
-namespace Salines\Verification\Transport\Sms;
+namespace CakeVerification\Transport\Sms;
 
+use CakeVerification\Transport\Sms\Driver\DummyTransport;
 use InvalidArgumentException;
 use ReflectionClass;
-use Salines\Verification\Transport\Sms\Driver\DummyTransport;
 use function Cake\I18n\__d;
 
 class TransportFactory

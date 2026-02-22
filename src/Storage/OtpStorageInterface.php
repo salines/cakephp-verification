@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Salines\Verification\Storage;
+namespace CakeVerification\Storage;
 
 interface OtpStorageInterface
 {

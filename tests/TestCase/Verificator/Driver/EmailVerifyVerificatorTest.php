@@ -1,16 +1,16 @@
 <?php
 declare(strict_types=1);
 
-namespace Salines\Verification\Test\TestCase\Verificator\Driver;
+namespace CakeVerification\Test\TestCase\Verificator\Driver;
 
 use Cake\TestSuite\TestCase;
+use CakeVerification\Test\TestSuite\Stub\IdentityStub;
+use CakeVerification\Verificator\Driver\EmailVerifyVerificator;
 use Psr\Http\Message\ServerRequestInterface;
-use Salines\Verification\Test\TestSuite\Stub\IdentityStub;
-use Salines\Verification\Verificator\Driver\EmailVerifyVerificator;
 use function Cake\I18n\__d;
 
 /**
- * @covers \Salines\Verification\Verificator\Driver\EmailVerifyVerificator
+ * @covers \CakeVerification\Verificator\Driver\EmailVerifyVerificator
  */
 final class EmailVerifyVerificatorTest extends TestCase
 {

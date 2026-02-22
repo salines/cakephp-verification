@@ -1,18 +1,18 @@
 <?php
 declare(strict_types=1);
 
-namespace Salines\Verification\Test\TestCase\Verificator\Driver;
+namespace CakeVerification\Test\TestCase\Verificator\Driver;
 
 use Cake\TestSuite\TestCase;
+use CakeVerification\Test\TestSuite\Stub\CaptureTransport;
+use CakeVerification\Test\TestSuite\Stub\IdentityStub;
+use CakeVerification\Transport\Sms\TransportInterface;
+use CakeVerification\Verificator\Driver\SmsOtpVerificator;
 use Psr\Http\Message\ServerRequestInterface;
-use Salines\Verification\Test\TestSuite\Stub\CaptureTransport;
-use Salines\Verification\Test\TestSuite\Stub\IdentityStub;
-use Salines\Verification\Transport\Sms\TransportInterface;
-use Salines\Verification\Verificator\Driver\SmsOtpVerificator;
 use function Cake\I18n\__d;
 
 /**
- * @covers \Salines\Verification\Verificator\Driver\SmsOtpVerificator
+ * @covers \CakeVerification\Verificator\Driver\SmsOtpVerificator
  */
 final class SmsOtpVerificatorTest extends TestCase
 {

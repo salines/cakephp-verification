@@ -1,12 +1,12 @@
 <?php
 declare(strict_types=1);
 
-namespace Salines\Verification\Verificator\Driver;
+namespace CakeVerification\Verificator\Driver;
 
 use Authentication\IdentityInterface;
+use CakeVerification\Transport\Sms\Message;
+use CakeVerification\Transport\Sms\TransportInterface;
 use Psr\Http\Message\ServerRequestInterface;
-use Salines\Verification\Transport\Sms\Message;
-use Salines\Verification\Transport\Sms\TransportInterface;
 use function Cake\I18n\__d;
 
 /**
@@ -27,7 +27,7 @@ use function Cake\I18n\__d;
 final class SmsOtpVerificator extends AbstractOtpVerificator
 {
     /**
-     * @param \Salines\Verification\Transport\Sms\TransportInterface $transport SMS transport
+     * @param \CakeVerification\Transport\Sms\TransportInterface $transport SMS transport
      * @param array<string, mixed> $config Config
      */
     public function __construct(

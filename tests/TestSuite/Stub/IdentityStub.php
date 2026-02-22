@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Salines\Verification\Test\TestSuite\Stub;
+namespace CakeVerification\Test\TestSuite\Stub;
 
 use Authentication\IdentityInterface;
 

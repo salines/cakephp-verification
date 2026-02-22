@@ -1,16 +1,16 @@
 <?php
 declare(strict_types=1);
 
-namespace Salines\Verification\Test\TestCase\Service;
+namespace CakeVerification\Test\TestCase\Service;
 
 use Cake\Http\ServerRequest;
 use Cake\TestSuite\TestCase;
-use Salines\Verification\Service\VerificationService;
-use Salines\Verification\Test\TestSuite\Http\ServerRequestFactoryTrait;
-use Salines\Verification\Test\TestSuite\Stub\AlwaysVerifiedVerificator;
-use Salines\Verification\Test\TestSuite\Stub\IdentityStub;
-use Salines\Verification\Test\TestSuite\Stub\NeverVerifiedVerificator;
-use Salines\Verification\Value\VerificationResult;
+use CakeVerification\Service\VerificationService;
+use CakeVerification\Test\TestSuite\Http\ServerRequestFactoryTrait;
+use CakeVerification\Test\TestSuite\Stub\AlwaysVerifiedVerificator;
+use CakeVerification\Test\TestSuite\Stub\IdentityStub;
+use CakeVerification\Test\TestSuite\Stub\NeverVerifiedVerificator;
+use CakeVerification\Value\VerificationResult;
 
 final class VerificationServiceTest extends TestCase
 {

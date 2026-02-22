@@ -1,17 +1,17 @@
 <?php
 declare(strict_types=1);
 
-namespace Salines\Verification\Service;
+namespace CakeVerification\Service;
 
 use Authentication\IdentityInterface;
 use Cake\Datasource\EntityInterface;
 use Cake\Utility\Inflector;
+use CakeVerification\Transport\Sms\TransportFactory;
+use CakeVerification\Transport\Sms\TransportInterface;
+use CakeVerification\Value\VerificationResult;
+use CakeVerification\Verificator\Driver\SmsOtpVerificator;
+use CakeVerification\Verificator\VerificationVerificatorInterface;
 use Psr\Http\Message\ServerRequestInterface;
-use Salines\Verification\Transport\Sms\TransportFactory;
-use Salines\Verification\Transport\Sms\TransportInterface;
-use Salines\Verification\Value\VerificationResult;
-use Salines\Verification\Verificator\Driver\SmsOtpVerificator;
-use Salines\Verification\Verificator\VerificationVerificatorInterface;
 
 final class VerificationService implements VerificationServiceInterface
 {
@@ -401,7 +401,7 @@ final class VerificationService implements VerificationServiceInterface
 
     /**
      * @param mixed $class
-     * @return class-string<\Salines\Verification\Verificator\VerificationVerificatorInterface>|null
+     * @return class-string<\CakeVerification\Verificator\VerificationVerificatorInterface>|null
      */
     private function normalizeDriverClass(mixed $class): ?string
     {
@@ -446,7 +446,7 @@ final class VerificationService implements VerificationServiceInterface
     }
 
     /**
-     * @param class-string<\Salines\Verification\Verificator\VerificationVerificatorInterface> $class
+     * @param class-string<\CakeVerification\Verificator\VerificationVerificatorInterface> $class
      * @param array<string, mixed> $config
      */
     private function instantiateDriver(string $class, array $config): VerificationVerificatorInterface
@@ -461,7 +461,7 @@ final class VerificationService implements VerificationServiceInterface
     }
 
     /**
-     * @return \Salines\Verification\Transport\Sms\TransportInterface
+     * @return \CakeVerification\Transport\Sms\TransportInterface
      */
     private function createSmsTransport(): TransportInterface
     {

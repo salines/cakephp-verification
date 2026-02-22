@@ -11,12 +11,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Salines\\Verification\\": "src/"
+            "CakeVerification\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Salines\\Verification\\Test\\": "tests/"
+            "CakeVerification\\Test\\": "tests/"
         }
     },
     "suggest": {
@@ -44,6 +44,9 @@
             "url": "https://www.paypal.me/paradzikn"
         }
     ],
+    "extra": {
+        "installer-name": "CakeVerification"
+    },
     "config": {
         "allow-plugins": {
             "dealerdirect/phpcodesniffer-composer-installer": true

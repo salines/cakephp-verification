@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Salines\Verification\Test\TestCase\Controller\Component;
+namespace CakeVerification\Test\TestCase\Controller\Component;
 
 use Cake\Controller\Controller;
 use Cake\Core\Configure;
@@ -10,11 +10,11 @@ use Cake\Http\ServerRequest;
 use Cake\ORM\Entity;
 use Cake\ORM\Table;
 use Cake\TestSuite\TestCase;
+use CakeVerification\Controller\Component\VerificationComponent;
+use CakeVerification\Service\VerificationServiceInterface;
+use CakeVerification\Test\TestSuite\Stub\IdentityStub;
+use CakeVerification\Value\VerificationResult;
 use PHPUnit\Framework\MockObject\MockObject;
-use Salines\Verification\Controller\Component\VerificationComponent;
-use Salines\Verification\Service\VerificationServiceInterface;
-use Salines\Verification\Test\TestSuite\Stub\IdentityStub;
-use Salines\Verification\Value\VerificationResult;
 
 /**
  * Tests for VerificationComponent::handleChooseVerification().
@@ -28,9 +28,9 @@ final class VerificationComponentChooseVerificationTest extends TestCase
      * Build a controller + component wired with the given request and mock service.
      *
      * @param \Cake\Http\ServerRequest $request
-     * @param \Salines\Verification\Service\VerificationServiceInterface&\PHPUnit\Framework\MockObject\MockObject $service
+     * @param \CakeVerification\Service\VerificationServiceInterface&\PHPUnit\Framework\MockObject\MockObject $service
      * @param \Cake\ORM\Table|null $usersTable Optional stub table (needed for POST save path)
-     * @return \Salines\Verification\Controller\Component\VerificationComponent
+     * @return \CakeVerification\Controller\Component\VerificationComponent
      */
     private function makeComponent(
         ServerRequest $request,
@@ -67,7 +67,7 @@ final class VerificationComponentChooseVerificationTest extends TestCase
      * Build a mock VerificationServiceInterface that reports the given available drivers.
      *
      * @param list<string> $drivers
-     * @return \Salines\Verification\Service\VerificationServiceInterface&\PHPUnit\Framework\MockObject\MockObject
+     * @return \CakeVerification\Service\VerificationServiceInterface&\PHPUnit\Framework\MockObject\MockObject
      */
     private function makeService(array $drivers): VerificationServiceInterface&MockObject
     {

@@ -1,11 +1,11 @@
 <?php
 declare(strict_types=1);
 
-namespace Salines\Verification\Test\TestCase\Transport\Sms\Driver;
+namespace CakeVerification\Test\TestCase\Transport\Sms\Driver;
 
+use CakeVerification\Transport\Sms\Driver\DummyTransport;
+use CakeVerification\Transport\Sms\Message;
 use PHPUnit\Framework\TestCase;
-use Salines\Verification\Transport\Sms\Driver\DummyTransport;
-use Salines\Verification\Transport\Sms\Message;
 
 final class DummyTransportTest extends TestCase
 {
