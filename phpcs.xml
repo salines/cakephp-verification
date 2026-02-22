@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<ruleset name="salines/cakephp-verification">
+    <description>CakePHP coding standard</description>
+
+    <file>src</file>
+    <file>tests</file>
+    <file>config</file>
+
+    <arg name="extensions" value="php"/>
+    <arg name="colors"/>
+    <arg value="p"/>
+
+    <rule ref="CakePHP"/>
+</ruleset>

@@ -7,8 +7,8 @@ use Cake\Command\Command;
 use Cake\Console\Arguments;
 use Cake\Console\ConsoleIo;
 use Cake\Console\ConsoleOptionParser;
-use Throwable;
 use Salines\Verification\Security\CryptoFactory;
+use Throwable;
 
 final class InstallCommand extends Command
 {
