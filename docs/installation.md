@@ -51,6 +51,10 @@ public function initialize(): void
 
 The plugin does not ship migrations. Add the columns you need to your `users` table.
 
+The `users` primary key may be an integer (`AUTO_INCREMENT`) or a string
+(UUID, e.g. `CHAR(36)`) — the plugin passes the identity id through to the
+ORM unchanged.
+
 ### Email verification (`emailVerify`)
 
 | Column | Type | Notes |

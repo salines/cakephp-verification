@@ -421,7 +421,7 @@ class VerificationComponent extends Component
 
         $controller = $this->getController();
         $users = $this->usersTable($controller);
-        $userEntity = $users->get((int)($user->id ?? 0));
+        $userEntity = $users->get($user->id ?? 0);
         $userEntity->email_verification_token = null;
         $userEntity->email_verification_token_expires = null;
         $users->saveOrFail($userEntity);
@@ -574,7 +574,7 @@ class VerificationComponent extends Component
 
             $controller = $this->getController();
             $users = $this->usersTable($controller);
-            $userEntity = $users->get((int)($user->id ?? 0));
+            $userEntity = $users->get($user->id ?? 0);
             $userEntity->email_verification_token = $token;
             $userEntity->email_verification_token_expires = $expires;
             $users->saveOrFail($userEntity);
@@ -1043,7 +1043,7 @@ class VerificationComponent extends Component
         }
 
         $id = $this->identityId($identity);
-        if ($id === 0) {
+        if ($id === 0 || $id === '0') {
             return $identity;
         }
 
@@ -1207,16 +1207,23 @@ class VerificationComponent extends Component
     }
 
     /**
+     * Primary key of the identity; supports integer and string (UUID) keys.
+     * Returns 0 when no identifier is available.
+     *
      * @param \Authentication\IdentityInterface $identity Identity
-     * @return int
+     * @return string|int
      */
-    private function identityId(IdentityInterface $identity): int
+    private function identityId(IdentityInterface $identity): int|string
     {
         $id = $identity->getIdentifier();
         if (is_array($id)) {
-            $id = $id['id'] ?? 0;
+            $id = $id['id'] ?? null;
         }
 
-        return (int)$id;
+        if (is_int($id) || (is_string($id) && $id !== '')) {
+            return $id;
+        }
+
+        return 0;
     }
 }
