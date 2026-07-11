@@ -132,20 +132,10 @@ See [docs/verification_helper.md](docs/verification_helper.md) for details.
 
 ## Documentation
 
-| Topic | File |
-|---|---|
-| Verification flows (setup, login, OTP choice) | [docs/verification_flow.md](docs/verification_flow.md) |
-| Installation | [docs/installation.md](docs/installation.md) |
-| Configuration reference | [docs/configuration.md](docs/configuration.md) |
-| Environment variables | [docs/env.md](docs/env.md) |
-| UsersController actions | [docs/users_controller.md](docs/users_controller.md) |
-| VerificationComponent | [docs/verification_component.md](docs/verification_component.md) |
-| VerificationHelper | [docs/verification_helper.md](docs/verification_helper.md) |
-| Email verification & Email OTP | [docs/email_verification.md](docs/email_verification.md) |
-| SMS OTP | [docs/sms_verification.md](docs/sms_verification.md) |
-| TOTP | [docs/totp_verification.md](docs/totp_verification.md) |
-| Enable / disable individual steps | [docs/verificator_enable_disable.md](docs/verificator_enable_disable.md) |
-| API reference | [docs/api/index.md](docs/api/index.md) |
+Full documentation index: [docs/index.md](docs/index.md). Start with
+[installation](docs/installation.md), then the
+[configuration reference](docs/configuration.md) and
+[environment variables](docs/env.md).
 
 ## License
 

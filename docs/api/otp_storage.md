@@ -81,6 +81,12 @@ persistent backend (Redis, Memcached):
 ],
 ```
 
+> **Warning:** if this cache config is not defined in your app, the plugin falls
+> back to the per-request `Array` engine and logs a warning. Codes issued in one
+> request are then gone in the next, so OTP verification will always fail and
+> lockout/rate limiting will be ineffective. This fallback exists only for tests
+> and driver construction; never rely on it at runtime.
+
 ### `stepCacheConfig` (array, default `[]`)
 
 Route individual steps to a dedicated cache config with different TTL or backend:
@@ -96,18 +102,4 @@ Route individual steps to a dedicated cache config with different TTL or backend
 
 ## Documentation
 
-| Topic | File |
-|---|---|
-| README | [../../README.md](../../README.md) |
-| Verification flows (setup, login, OTP choice) | [../verification_flow.md](../verification_flow.md) |
-| Installation | [../installation.md](../installation.md) |
-| Configuration reference | [../configuration.md](../configuration.md) |
-| Environment variables | [../env.md](../env.md) |
-| UsersController actions | [../users_controller.md](../users_controller.md) |
-| VerificationComponent | [../verification_component.md](../verification_component.md) |
-| VerificationHelper | [../verification_helper.md](../verification_helper.md) |
-| Email verification & Email OTP | [../email_verification.md](../email_verification.md) |
-| SMS OTP | [../sms_verification.md](../sms_verification.md) |
-| TOTP | [../totp_verification.md](../totp_verification.md) |
-| Enable / disable individual steps | [../verificator_enable_disable.md](../verificator_enable_disable.md) |
-| API reference index | [index.md](index.md) |
+Full documentation index: [../index.md](../index.md)

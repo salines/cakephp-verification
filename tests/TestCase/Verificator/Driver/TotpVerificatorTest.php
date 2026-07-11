@@ -141,6 +141,87 @@ final class TotpVerificatorTest extends TestCase
         $this->assertFalse($v->verify($this->req(), $identity, ['code' => '287082']));
     }
 
+    public function testVerifyThrottlesAfterMaxFailedAttempts(): void
+    {
+        $secret = 'GEZDGNBVGY3TQOJQGEZDGNBVGY3TQOJQ';
+        $v = new TotpVerificator([
+            'options' => [
+                'now' => 59,
+                'throttle' => ['max' => 5, 'window' => 300],
+            ],
+        ]);
+        $identity = new IdentityStub(['id' => 'throttle-lockout-user', 'totp_secret' => $secret]);
+        $request = $this->req();
+
+        for ($i = 0; $i < 5; $i++) {
+            $this->assertFalse($v->verify($request, $identity, ['code' => '000000']));
+        }
+
+        // Correct code, but identity is throttled now.
+        $this->assertFalse($v->verify($request, $identity, ['code' => '287082']));
+    }
+
+    public function testThrottleCounterClearsOnSuccess(): void
+    {
+        $secret = 'GEZDGNBVGY3TQOJQGEZDGNBVGY3TQOJQ';
+        $v = new TotpVerificator([
+            'options' => [
+                'now' => 59,
+                'throttle' => ['max' => 5, 'window' => 300],
+            ],
+        ]);
+        $identity = new IdentityStub(['id' => 'throttle-reset-user', 'totp_secret' => $secret]);
+        $request = $this->req();
+
+        for ($i = 0; $i < 4; $i++) {
+            $this->assertFalse($v->verify($request, $identity, ['code' => '000000']));
+        }
+        $this->assertTrue($v->verify($request, $identity, ['code' => '287082']));
+
+        // Counter was cleared on success, so four more failures do not lock out.
+        for ($i = 0; $i < 4; $i++) {
+            $this->assertFalse($v->verify($request, $identity, ['code' => '000000']));
+        }
+        $this->assertTrue($v->verify($request, $identity, ['code' => '287082']));
+    }
+
+    public function testThrottleDisabledWithMaxZero(): void
+    {
+        $secret = 'GEZDGNBVGY3TQOJQGEZDGNBVGY3TQOJQ';
+        $v = new TotpVerificator([
+            'options' => [
+                'now' => 59,
+                'throttle' => ['max' => 0, 'window' => 300],
+            ],
+        ]);
+        $identity = new IdentityStub(['id' => 'throttle-disabled-user', 'totp_secret' => $secret]);
+        $request = $this->req();
+
+        for ($i = 0; $i < 10; $i++) {
+            $this->assertFalse($v->verify($request, $identity, ['code' => '000000']));
+        }
+        $this->assertTrue($v->verify($request, $identity, ['code' => '287082']));
+    }
+
+    public function testThrottleSkippedWithoutIdentityKey(): void
+    {
+        $secret = 'GEZDGNBVGY3TQOJQGEZDGNBVGY3TQOJQ';
+        $v = new TotpVerificator([
+            'options' => [
+                'now' => 59,
+                'throttle' => ['max' => 5, 'window' => 300],
+            ],
+        ]);
+        // No 'id' on identity: throttling has no stable key and is skipped.
+        $identity = new IdentityStub(['totp_secret' => $secret]);
+        $request = $this->req();
+
+        for ($i = 0; $i < 6; $i++) {
+            $this->assertFalse($v->verify($request, $identity, ['code' => '000000']));
+        }
+        $this->assertTrue($v->verify($request, $identity, ['code' => '287082']));
+    }
+
     private function req(): ServerRequestInterface
     {
         return $this->createStub(ServerRequestInterface::class);

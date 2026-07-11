@@ -11,20 +11,10 @@ Two email-based verification methods are available:
 
 ## Database columns
 
-### `emailVerify`
-
-| Column | Type | Notes |
-|---|---|---|
-| `email` | VARCHAR | Required |
-| `email_verification_token` | VARCHAR(191), nullable | Token stored by the plugin |
-| `email_verification_token_expires` | DATETIME, nullable | Token expiry, stored by the plugin |
-| `email_verified_at` | DATETIME, nullable | Set by the plugin when verified |
-
-### `emailOtp`
-
-| Column | Notes |
-|---|---|
-| `email` | Required — where the code is sent |
+`emailVerify` uses `email`, `email_verification_token`,
+`email_verification_token_expires`, and `email_verified_at`. `emailOtp` uses
+only `email`. Column types and an example migration are in
+[installation.md](installation.md#5-database-columns).
 
 The OTP code itself is **not** stored in the database; it lives in the CakePHP
 Cache (see [otp_storage.md](api/otp_storage.md)).
@@ -288,18 +278,4 @@ Omit `setPlugin()` to use your own templates instead.
 
 ## Documentation
 
-| Topic | File |
-|---|---|
-| README | [../README.md](../README.md) |
-| Verification flows (setup, login, OTP choice) | [verification_flow.md](verification_flow.md) |
-| Installation | [installation.md](installation.md) |
-| Configuration reference | [configuration.md](configuration.md) |
-| Environment variables | [env.md](env.md) |
-| UsersController actions | [users_controller.md](users_controller.md) |
-| VerificationComponent | [verification_component.md](verification_component.md) |
-| VerificationHelper | [verification_helper.md](verification_helper.md) |
-| Email verification & Email OTP | [email_verification.md](email_verification.md) |
-| SMS OTP | [sms_verification.md](sms_verification.md) |
-| TOTP | [totp_verification.md](totp_verification.md) |
-| Enable / disable individual steps | [verificator_enable_disable.md](verificator_enable_disable.md) |
-| API reference | [api/index.md](api/index.md) |
+Full documentation index: [index.md](index.md)

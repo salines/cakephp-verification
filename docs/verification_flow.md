@@ -173,18 +173,4 @@ example.
 
 ## Documentation
 
-| Topic | File |
-|---|---|
-| README | [../README.md](../README.md) |
-| Verification flows (setup, login, OTP choice) | [verification_flow.md](verification_flow.md) |
-| Installation | [installation.md](installation.md) |
-| Configuration reference | [configuration.md](configuration.md) |
-| Environment variables | [env.md](env.md) |
-| UsersController actions | [users_controller.md](users_controller.md) |
-| VerificationComponent | [verification_component.md](verification_component.md) |
-| VerificationHelper | [verification_helper.md](verification_helper.md) |
-| Email verification & Email OTP | [email_verification.md](email_verification.md) |
-| SMS OTP | [sms_verification.md](sms_verification.md) |
-| TOTP | [totp_verification.md](totp_verification.md) |
-| Enable / disable individual steps | [verificator_enable_disable.md](verificator_enable_disable.md) |
-| API reference | [api/index.md](api/index.md) |
+Full documentation index: [index.md](index.md)

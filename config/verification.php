@@ -152,7 +152,7 @@ return [
                 'fields' => [
                     // Identity / DB column names for email step
                     'email' => env('VERIFICATION_EMAIL_FIELD', 'email'),
-                    'emailVerified' => env('VERIFICATION_DB_COL_EMAIL_VERIFIED_AT', 'emailVerifiedAt'),
+                    'emailVerified' => env('VERIFICATION_DB_COL_EMAIL_VERIFIED_AT', 'email_verified_at'),
                 ],
                 'options' => [
                     'ttl' => env('VERIFICATION_EMAIL_TTL', 600),
@@ -192,6 +192,11 @@ return [
                     'period' => env('VERIFICATION_TOTP_PERIOD', 30),
                     'algorithm' => env('VERIFICATION_TOTP_ALGO', 'sha1'),
                     'drift' => env('VERIFICATION_TOTP_DRIFT', 1),
+                    // Brute force protection: max failed attempts per window (0 disables).
+                    'throttle' => [
+                        'max' => env('VERIFICATION_TOTP_THROTTLE_MAX', 5),
+                        'window' => env('VERIFICATION_TOTP_THROTTLE_WINDOW', 300),
+                    ],
                 ],
             ],
         ],

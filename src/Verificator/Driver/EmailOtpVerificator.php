@@ -15,10 +15,11 @@ use function Cake\I18n\__d;
  * - Validate user-provided code in verify().
  *
  * Config (array):
- * - 'fields.email'   : string Field name on identity (default: 'email')
- * - 'otp.length'     : int    Digits length (default: 6)
- * - 'otp.ttl'        : int    Seconds time-to-live (default: 300)
- * - 'delivery'       : callable(Request, Identity, code): void  Userland email sender
+ * - 'fields.email'         : string Field name on identity (default: 'email')
+ * - 'fields.emailVerified' : string Verified flag/date field (default: 'email_verified_at')
+ * - 'otp.length'           : int    Digits length (default: 6)
+ * - 'otp.ttl'              : int    Seconds time-to-live; also read from 'options.ttl' (default: 300)
+ * - 'options.delivery'     : callable(Request, Identity, code, config): void  Userland email sender
  */
 final class EmailOtpVerificator extends AbstractOtpVerificator
 {
