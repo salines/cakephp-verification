@@ -14,4 +14,4 @@ Internal and advanced reference documentation for the cakephp-verification plugi
 
 ---
 
-[← Back to docs](../README.md)
+[← Back to the documentation index](../index.md)

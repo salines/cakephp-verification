@@ -3,6 +3,10 @@
 All env variables are optional. The default value is used when the variable is
 not set. Set them in your `.env` file or server environment.
 
+This file is the single source of truth for environment variables. See the
+[variable to config key map](#variable-to-config-key-map) at the bottom for how
+each variable maps to a key in `config/verification.php`.
+
 ---
 
 ## General
@@ -61,7 +65,7 @@ prefix differs.
 | Variable | Default | Description |
 |---|---|---|
 | `VERIFICATION_CRYPTO_DRIVER` | `aes-gcm` | Encryption driver: `aes-gcm` or `sodium` |
-| `VERIFICATION_CRYPTO_KEY` | *(empty)* | Base64-encoded 32-byte encryption key. **Required** when TOTP is enabled. Generate with: `php -r "echo base64_encode(random_bytes(32)), PHP_EOL;"` |
+| `VERIFICATION_CRYPTO_KEY` | *(empty)* | Base64-encoded 32-byte encryption key. **Required** when TOTP is enabled. Key generation: see [api/sodium_crypto.md](api/sodium_crypto.md) / [api/aes_gcm_crypto.md](api/aes_gcm_crypto.md) |
 
 > If `VERIFICATION_CRYPTO_KEY` is empty, the TOTP secret is stored unencrypted.
 > Always set this in production.
@@ -135,6 +139,8 @@ Override only when your `users` table uses different column names than the defau
 | `VERIFICATION_TOTP_PERIOD` | `30` | TOTP window in seconds (standard: 30) |
 | `VERIFICATION_TOTP_ALGO` | `sha1` | HMAC algorithm: `sha1`, `sha256`, or `sha512` |
 | `VERIFICATION_TOTP_DRIFT` | `1` | Allowed clock drift in windows (±1 = ±30 s with default period) |
+| `VERIFICATION_TOTP_THROTTLE_MAX` | `5` | Max failed TOTP attempts per window before lockout (`0` disables throttling) |
+| `VERIFICATION_TOTP_THROTTLE_WINDOW` | `300` | Throttle window in seconds |
 
 ---
 
@@ -167,20 +173,44 @@ VERIFICATION_SMS_COUNTRY_CODE=BA
 
 ---
 
+## Variable to config key map
+
+| Variable | Config key |
+|---|---|
+| `VERIFICATION_ENABLED` | `enabled` |
+| `VERIFICATION_REQUIRED_SETUP_STEPS` | `requiredSetupSteps` |
+| `VERIFICATION_OTP_LENGTH` | `otp.length` |
+| `VERIFICATION_CACHE_CONFIG` | `storage.cacheConfig` |
+| `VERIFICATION_MAX_ATTEMPTS` | `storage.maxAttempts` |
+| `VERIFICATION_LOCKOUT` | `storage.lockoutSeconds` |
+| `VERIFICATION_RESEND_COOLDOWN` | `storage.resendCooldown` |
+| `VERIFICATION_OTP_BURST` | `storage.burst` |
+| `VERIFICATION_OTP_PERIOD` | `storage.periodSeconds` |
+| `VERIFICATION_CRYPTO_DRIVER` | `crypto.driver` |
+| `VERIFICATION_CRYPTO_KEY` | `crypto.key` |
+| `VERIFICATION_EMAIL_VERIFY_ENABLED` | `drivers.emailVerify.enabled` |
+| `VERIFICATION_EMAIL_OTP_ENABLED` | `drivers.emailOtp.enabled` |
+| `VERIFICATION_SMS_OTP_ENABLED` | `drivers.smsOtp.enabled` |
+| `VERIFICATION_TOTP_ENABLED` | `drivers.totp.enabled` |
+| `VERIFICATION_EMAIL_TTL` | `drivers.emailOtp.options.ttl` |
+| `VERIFICATION_SMS_TTL` | `drivers.smsOtp.options.ttl` |
+| `VERIFICATION_SMS_MESSAGE` | `drivers.smsOtp.options.messageTemplate` |
+| `VERIFICATION_SMS_SENDER` | `drivers.smsOtp.options.senderId` |
+| `VERIFICATION_SMS_E164` | `drivers.smsOtp.options.normalizeE164` |
+| `VERIFICATION_SMS_COUNTRY_CODE` | `drivers.smsOtp.options.defaultCountryCode` |
+| `VERIFICATION_TOTP_DIGITS` | `drivers.totp.options.digits` |
+| `VERIFICATION_TOTP_PERIOD` | `drivers.totp.options.period` |
+| `VERIFICATION_TOTP_ALGO` | `drivers.totp.options.algorithm` |
+| `VERIFICATION_TOTP_DRIFT` | `drivers.totp.options.drift` |
+| `VERIFICATION_TOTP_THROTTLE_MAX` | `drivers.totp.options.throttle.max` |
+| `VERIFICATION_TOTP_THROTTLE_WINDOW` | `drivers.totp.options.throttle.window` |
+| `VERIFICATION_SMS_TRANSPORT` | `sms.defaultTransport` |
+| `VERIFICATION_ID_FIELD` | `identity.fields.id` |
+| `VERIFICATION_DB_COL_*`, `VERIFICATION_EMAIL_FIELD`, `VERIFICATION_PHONE_FIELD` | `db.users.columns.*` and driver `fields` |
+| `VERIFICATION_ROUTE_*`, `VERIFICATION_PENDING_*`, `VERIFICATION_VERIFIED_*`, `VERIFICATION_ENROLL_*`, `VERIFICATION_CHOOSE_*` | `routing.*` |
+
+---
+
 ## Documentation
 
-| Topic | File |
-|---|---|
-| README | [../README.md](../README.md) |
-| Verification flows (setup, login, OTP choice) | [verification_flow.md](verification_flow.md) |
-| Installation | [installation.md](installation.md) |
-| Configuration reference | [configuration.md](configuration.md) |
-| Environment variables | [env.md](env.md) |
-| UsersController actions | [users_controller.md](users_controller.md) |
-| VerificationComponent | [verification_component.md](verification_component.md) |
-| VerificationHelper | [verification_helper.md](verification_helper.md) |
-| Email verification & Email OTP | [email_verification.md](email_verification.md) |
-| SMS OTP | [sms_verification.md](sms_verification.md) |
-| TOTP | [totp_verification.md](totp_verification.md) |
-| Enable / disable individual steps | [verificator_enable_disable.md](verificator_enable_disable.md) |
-| API reference | [api/index.md](api/index.md) |
+Full documentation index: [index.md](index.md)

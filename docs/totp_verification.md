@@ -22,10 +22,9 @@ See [installation.md](installation.md) for the full setup guide.
 
 ## Database fields
 
-| Column | Type | Notes |
-|---|---|---|
-| `totp_secret` | VARCHAR(255), nullable | Base32 secret — store encrypted |
-| `totp_verified_at` | DATETIME, nullable | Set after first successful verify |
+Uses `totp_secret` (Base32 secret, store encrypted) and `totp_verified_at`.
+Column types and an example migration are in
+[installation.md](installation.md#5-database-columns).
 
 ## Configuration
 
@@ -50,6 +49,10 @@ return [
                     'digits'    => 6,
                     'period'    => 30,       // seconds per TOTP window
                     'algorithm' => 'sha1',   // sha1 | sha256 | sha512
+                    'throttle'  => [
+                        'max'    => 5,   // failed attempts per window (0 = off)
+                        'window' => 300, // seconds
+                    ],
                 ],
             ],
         ],
@@ -183,41 +186,46 @@ Display the QR code in `templates/Users/enroll.php`:
 
 ## Secret encryption
 
-The TOTP secret is sensitive. Encrypt it at rest with the `crypto` config key.
-
-### Sodium (recommended)
+The TOTP secret is sensitive. Encrypt it at rest with the `crypto` config key:
 
 ```php
 'crypto' => [
-    'driver' => 'sodium',
-    'key'    => base64_decode(env('VERIFICATION_SODIUM_KEY', '')),
+    'driver' => 'sodium',   // recommended; or 'aes-gcm'
+    'key'    => base64_decode(env('VERIFICATION_CRYPTO_KEY', '')),
 ],
 ```
 
-Generate a key:
+Key generation and full driver details:
+[sodium_crypto.md](api/sodium_crypto.md) and
+[aes_gcm_crypto.md](api/aes_gcm_crypto.md).
 
-```bash
-php -r "echo base64_encode(random_bytes(SODIUM_CRYPTO_SECRETBOX_KEYBYTES)), PHP_EOL;"
-```
+---
 
-See [sodium_crypto.md](api/sodium_crypto.md) for full details.
+## Brute force protection
 
-### AES-GCM (fallback)
+Failed TOTP attempts are throttled per identity. After `throttle.max` failed
+attempts within `throttle.window` seconds (default: 5 attempts in 300 s), all
+further codes are rejected until the window expires, including correct ones.
+A successful verification clears the counter.
 
 ```php
-'crypto' => [
-    'driver' => 'aes-gcm',
-    'key'    => base64_decode(env('VERIFICATION_AESGCM_KEY', '')),
+'drivers' => [
+    'totp' => [
+        'options' => [
+            'throttle' => [
+                'max'    => 5,   // 0 disables throttling
+                'window' => 300, // seconds
+            ],
+        ],
+    ],
 ],
 ```
 
-Generate a key:
+Counters are stored in the cache profile from `storage.cacheConfig`
+(default: `verification`), keyed by the `identity.fields.id` value. If the
+identity has no such field, throttling is skipped.
 
-```bash
-php -r "echo base64_encode(random_bytes(32)), PHP_EOL;"
-```
-
-See [aes_gcm_crypto.md](api/aes_gcm_crypto.md) for full details.
+Env variables: `VERIFICATION_TOTP_THROTTLE_MAX`, `VERIFICATION_TOTP_THROTTLE_WINDOW`.
 
 ---
 
@@ -225,6 +233,7 @@ See [aes_gcm_crypto.md](api/aes_gcm_crypto.md) for full details.
 
 - TOTP uses a sliding ±1 window, accepting the previous, current, and next
   30-second codes to tolerate clock skew.
+- Failed attempts are throttled per identity (see Brute force protection above).
 - The secret is decrypted in memory by the component before calling
   `TotpVerificator::verify()`. It is never stored in plain text if crypto is configured.
 - For login 2FA with TOTP, the component skips auto-start (TOTP has no delivery
@@ -234,18 +243,4 @@ See [aes_gcm_crypto.md](api/aes_gcm_crypto.md) for full details.
 
 ## Documentation
 
-| Topic | File |
-|---|---|
-| README | [../README.md](../README.md) |
-| Verification flows (setup, login, OTP choice) | [verification_flow.md](verification_flow.md) |
-| Installation | [installation.md](installation.md) |
-| Configuration reference | [configuration.md](configuration.md) |
-| Environment variables | [env.md](env.md) |
-| UsersController actions | [users_controller.md](users_controller.md) |
-| VerificationComponent | [verification_component.md](verification_component.md) |
-| VerificationHelper | [verification_helper.md](verification_helper.md) |
-| Email verification & Email OTP | [email_verification.md](email_verification.md) |
-| SMS OTP | [sms_verification.md](sms_verification.md) |
-| TOTP | [totp_verification.md](totp_verification.md) |
-| Enable / disable individual steps | [verificator_enable_disable.md](verificator_enable_disable.md) |
-| API reference | [api/index.md](api/index.md) |
+Full documentation index: [index.md](index.md)

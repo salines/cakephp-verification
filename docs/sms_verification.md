@@ -11,11 +11,9 @@ See [installation.md](installation.md) for the full setup guide.
 
 ## Database fields
 
-| Column | Type | Notes |
-|---|---|---|
-| `phone` | VARCHAR(32), nullable | Phone number to send OTP to |
-| `phone_verified_at` | DATETIME, nullable | Set after first successful OTP |
-| `phone_verified` | TINYINT(1), default 0 | Optional boolean flag |
+Uses `phone`, `phone_verified_at`, and the optional `phone_verified` flag.
+Column types and an example migration are in
+[installation.md](installation.md#5-database-columns).
 
 ## Configuration
 
@@ -239,18 +237,4 @@ the constructor has at least one required parameter.
 
 ## Documentation
 
-| Topic | File |
-|---|---|
-| README | [../README.md](../README.md) |
-| Verification flows (setup, login, OTP choice) | [verification_flow.md](verification_flow.md) |
-| Installation | [installation.md](installation.md) |
-| Configuration reference | [configuration.md](configuration.md) |
-| Environment variables | [env.md](env.md) |
-| UsersController actions | [users_controller.md](users_controller.md) |
-| VerificationComponent | [verification_component.md](verification_component.md) |
-| VerificationHelper | [verification_helper.md](verification_helper.md) |
-| Email verification & Email OTP | [email_verification.md](email_verification.md) |
-| SMS OTP | [sms_verification.md](sms_verification.md) |
-| TOTP | [totp_verification.md](totp_verification.md) |
-| Enable / disable individual steps | [verificator_enable_disable.md](verificator_enable_disable.md) |
-| API reference | [api/index.md](api/index.md) |
+Full documentation index: [index.md](index.md)
