@@ -1,5 +1,9 @@
 parameters:
     level: 5
+    # composer.lock is not committed, so CI runs newer dependency/PHPStan
+    # versions whose error message wording can drift from the local setup;
+    # a pattern that stops matching must not itself become a failure.
+    reportUnmatchedIgnoredErrors: false
     paths:
         - src/
     excludePaths:
@@ -32,6 +36,7 @@ parameters:
 
         # Dynamic object property access via getOriginalData() which returns mixed narrowed to object.
         # These properties are plugin-internal state flags set on CakePHP Entity objects at runtime.
-        - '#Access to an undefined property ArrayAccess::\$_verification_login_required#'
-        - '#Access to an undefined property ArrayAccess::\$_verification_login_code_sent#'
-        - '#Access to an undefined property ArrayAccess::\$_verification_login_triggered_id#'
+        # Newer PHPStan reports the type with generics (ArrayAccess<string, mixed>), older without.
+        - '#Access to an undefined property ArrayAccess(<[^>]*>)?::\$_verification_login_required#'
+        - '#Access to an undefined property ArrayAccess(<[^>]*>)?::\$_verification_login_code_sent#'
+        - '#Access to an undefined property ArrayAccess(<[^>]*>)?::\$_verification_login_triggered_id#'
