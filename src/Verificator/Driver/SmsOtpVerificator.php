@@ -17,12 +17,14 @@ use function Cake\I18n\__d;
  * - Validate user-provided code in verify().
  *
  * Config (array):
- * - 'fields.phone'   : string Field name on identity (default: 'phone')
- * - 'otp.length'     : int    Digits length (default: 6)
- * - 'otp.ttl'        : int    Seconds time-to-live (default: 300)
- * - 'from'           : string|null Sender id/number if transport supports it
- * - 'normalizeE164'  : bool   Normalize phone to E.164 when possible (default: false)
- * - 'defaultCountryCode' : string|null Default country code for E.164
+ * - 'fields.phone'               : string Field name on identity (default: 'phone')
+ * - 'fields.phoneVerifiedAt'     : string Verified flag/date field (default: 'phone_verified_at')
+ * - 'otp.length'                 : int    Digits length (default: 6)
+ * - 'otp.ttl'                    : int    Seconds time-to-live; also read from 'options.ttl' (default: 300)
+ * - 'options.senderId'           : string|null Sender id/number if transport supports it
+ * - 'options.messageTemplate'    : string SMS body with {code} and {ttl} placeholders
+ * - 'options.normalizeE164'      : bool   Normalize phone to E.164 when possible (default: false)
+ * - 'options.defaultCountryCode' : string|null Default country code for E.164
  */
 final class SmsOtpVerificator extends AbstractOtpVerificator
 {

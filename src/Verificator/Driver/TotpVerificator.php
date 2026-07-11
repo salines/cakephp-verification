@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace CakeVerification\Verificator\Driver;
 
 use Authentication\IdentityInterface;
+use Cake\Cache\Cache;
 use CakeVerification\Verificator\VerificationVerificatorInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use function Cake\I18n\__d;
@@ -16,13 +17,16 @@ use function Cake\I18n\__d;
  * - If enrolled, validate a time-based one-time code.
  *
  * Config (array):
- * - 'fields.totpSecret' : string Field name on identity (default: 'totp_secret')
- * - 'window'             : int    Step window (default: 30s)
- * - 'digits'             : int    Digits (default: 6)
- * - 'algo'               : string Algorithm (default: 'sha1')
- * - 'drift'              : int    Allowed past/future steps (default: 1)
- * - 'throttle.max'       : int    Max attempts per window (default: 5)
- * - 'throttle.window'    : int    Seconds window (default: 300)
+ * - 'fields.totpSecret'       : string Field name on identity (default: 'totp_secret')
+ * - 'fields.totpVerified'     : string Verified flag/date field (default: 'totp_verified_at')
+ * - 'options.period'          : int    Time step in seconds (default: 30)
+ * - 'options.digits'          : int    Digits (default: 6)
+ * - 'options.algorithm'       : string Algorithm (default: 'sha1')
+ * - 'options.drift'           : int    Allowed past/future steps (default: 1)
+ * - 'options.throttle.max'    : int    Max failed attempts per window, 0 disables (default: 5)
+ * - 'options.throttle.window' : int    Throttle window in seconds (default: 300)
+ * - 'identityField'           : string Identity field used as throttle key (default: 'id')
+ * - 'storage.cacheConfig'     : string Cache config for throttle counters (default: 'verification')
  */
 final class TotpVerificator implements VerificationVerificatorInterface
 {
@@ -49,6 +53,11 @@ final class TotpVerificator implements VerificationVerificatorInterface
             'algo' => (string)($options['algorithm'] ?? $options['algo'] ?? $config['algo'] ?? 'sha1'),
             'drift' => (int)($options['drift'] ?? $options['window'] ?? $config['drift'] ?? 1),
             'now' => $options['now'] ?? null,
+            'identityField' => (string)($config['identityField'] ?? 'id'),
+            'throttle' => [
+                'max' => (int)($options['throttle']['max'] ?? $config['throttle']['max'] ?? 5),
+                'window' => (int)($options['throttle']['window'] ?? $config['throttle']['window'] ?? 300),
+            ],
         ];
     }
 
@@ -145,7 +154,22 @@ final class TotpVerificator implements VerificationVerificatorInterface
         $now = $this->config['now'];
         $timestamp = is_int($now) ? $now : time();
 
-        return $this->verifyTotp($secret, $code, $timestamp, $period, $digits, $algo, $drift);
+        $throttleKey = $this->throttleIdentityKey($identity);
+        if ($throttleKey !== '' && $this->isThrottled($throttleKey, $timestamp)) {
+            return false;
+        }
+
+        $ok = $this->verifyTotp($secret, $code, $timestamp, $period, $digits, $algo, $drift);
+
+        if ($throttleKey !== '') {
+            if ($ok) {
+                $this->clearThrottle($throttleKey);
+            } else {
+                $this->registerFailedAttempt($throttleKey, $timestamp);
+            }
+        }
+
+        return $ok;
     }
 
     /**
@@ -239,6 +263,108 @@ final class TotpVerificator implements VerificationVerificatorInterface
         }
 
         return $bytes;
+    }
+
+    /**
+     * Resolve the identity value used as throttle key.
+     * Empty string disables throttling (no stable key available).
+     *
+     * @param \Authentication\IdentityInterface $identity Identity
+     * @return string
+     */
+    private function throttleIdentityKey(IdentityInterface $identity): string
+    {
+        $throttle = (array)($this->config['throttle'] ?? []);
+        $max = (int)($throttle['max'] ?? 0);
+        $window = (int)($throttle['window'] ?? 0);
+        if ($max <= 0 || $window <= 0) {
+            return '';
+        }
+
+        $field = (string)($this->config['identityField'] ?? 'id');
+        $value = $this->readField($identity, $field);
+
+        return $value === null ? '' : (string)$value;
+    }
+
+    /**
+     * @param string $identityKey Identity key
+     * @param int $now Current timestamp
+     * @return bool
+     */
+    private function isThrottled(string $identityKey, int $now): bool
+    {
+        $payload = Cache::read($this->throttleCacheKey($identityKey), $this->throttleCacheConfig());
+        if (!is_array($payload)) {
+            return false;
+        }
+
+        $windowStart = (int)($payload['windowStart'] ?? 0);
+        $count = (int)($payload['count'] ?? 0);
+        $window = (int)($this->config['throttle']['window'] ?? 300);
+        if ($windowStart === 0 || ($windowStart + $window) <= $now) {
+            return false;
+        }
+
+        return $count >= (int)($this->config['throttle']['max'] ?? 5);
+    }
+
+    /**
+     * @param string $identityKey Identity key
+     * @param int $now Current timestamp
+     * @return void
+     */
+    private function registerFailedAttempt(string $identityKey, int $now): void
+    {
+        $cacheConfig = $this->throttleCacheConfig();
+        $key = $this->throttleCacheKey($identityKey);
+        $payload = Cache::read($key, $cacheConfig);
+        $payload = is_array($payload) ? $payload : [];
+
+        $windowStart = (int)($payload['windowStart'] ?? 0);
+        $count = (int)($payload['count'] ?? 0);
+        $window = (int)($this->config['throttle']['window'] ?? 300);
+        if ($windowStart === 0 || ($windowStart + $window) <= $now) {
+            $windowStart = $now;
+            $count = 0;
+        }
+
+        Cache::write($key, ['windowStart' => $windowStart, 'count' => $count + 1], $cacheConfig);
+    }
+
+    /**
+     * @param string $identityKey Identity key
+     * @return void
+     */
+    private function clearThrottle(string $identityKey): void
+    {
+        Cache::delete($this->throttleCacheKey($identityKey), $this->throttleCacheConfig());
+    }
+
+    /**
+     * @param string $identityKey Identity key
+     * @return string
+     */
+    private function throttleCacheKey(string $identityKey): string
+    {
+        return sprintf('totp:throttle:%s', $identityKey);
+    }
+
+    /**
+     * @return string
+     */
+    private function throttleCacheConfig(): string
+    {
+        $name = (string)($this->config['storage']['cacheConfig'] ?? 'verification');
+        if (!Cache::getConfig($name)) {
+            Cache::setConfig($name, [
+                'className' => 'Array',
+                'prefix' => 'verification_',
+                'duration' => '+1 day',
+            ]);
+        }
+
+        return $name;
     }
 
     /**

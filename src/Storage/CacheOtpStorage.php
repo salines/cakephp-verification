@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace CakeVerification\Storage;
 
 use Cake\Cache\Cache;
+use Cake\Log\Log;
 use RuntimeException;
 use function Cake\I18n\__d;
 
@@ -215,6 +216,13 @@ final class CacheOtpStorage implements OtpStorageInterface
     private function ensureCacheConfig(string $cacheConfig): void
     {
         if (!Cache::getConfig($cacheConfig)) {
+            Log::warning(sprintf(
+                'CakeVerification: cache config "%s" is not defined; falling back to the per-request '
+                . 'Array engine. OTP codes will NOT survive across requests. Define the "%s" cache '
+                . 'config in your app to make OTP verification work in production.',
+                $cacheConfig,
+                $cacheConfig,
+            ));
             Cache::setConfig($cacheConfig, [
                 'className' => 'Array',
                 'prefix' => 'verification_',
