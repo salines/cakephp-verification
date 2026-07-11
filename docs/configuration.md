@@ -236,6 +236,10 @@ Maps the identity field used as the OTP storage key (default: `id`).
 ],
 ```
 
+Integer and string (UUID) primary keys are both supported out of the box;
+this mapping is only needed when the OTP storage key should come from a
+different column than `id`.
+
 ---
 
 ## `sms`

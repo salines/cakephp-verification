@@ -15,6 +15,7 @@ Email OTP, SMS OTP, and TOTP (authenticator apps).
 - Optional at-rest encryption of the TOTP secret (Sodium or AES-256-GCM)
 - Rate-limiting, lockout, and resend cooldown for OTP codes
 - `VerificationComponent` handles all controller logic (auto-start, verify, mark verified, redirect)
+- Works with integer and UUID user primary keys
 
 ## Requirements
 

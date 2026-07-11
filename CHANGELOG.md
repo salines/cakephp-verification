@@ -5,6 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.1] - 2026-07-12
+
+### Added
+
+- Support for string (UUID) user primary keys. `VerificationComponent` no
+  longer casts the identity id to `int`: `identityId()` now returns the raw
+  integer or string key (falling back to `0` when the identity has no
+  identifier), and user lookups for email verification pass the entity id
+  through unchanged. Integer-keyed apps are unaffected. OTP storage already
+  used string identity keys, so no storage changes were needed.
+
 ## [1.1.0] - 2026-07-12
 
 ### Security
