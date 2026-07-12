@@ -4,71 +4,164 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: ar\n"
 
-msgid "Additional verification is required to proceed."
-msgstr "يلزم تحقق إضافي للمتابعة."
+msgid "Additional Verification"
+msgstr "تحقق إضافي"
 
-msgid "Invalid transport definition: {0}"
-msgstr "تعريف النقل غير صالح: {0}"
-
-msgid "Unknown transport: {0}"
-msgstr "نقل غير معروف: {0}"
-
-msgid "OTP resend cooldown is active."
-msgstr "فترة الانتظار لإعادة إرسال OTP فعالة."
-
-msgid "Identity key is missing for OTP storage."
-msgstr "مفتاح الهوية مفقود لتخزين OTP."
-
-msgid "Email One-Time Code"
-msgstr "رمز بريد إلكتروني لمرة واحدة"
-
-msgid "SMS One-Time Code"
-msgstr "رمز SMS لمرة واحدة"
-
-msgid "Authenticator App (TOTP)"
-msgstr "تطبيق المصادقة (TOTP)"
+msgid "Additional verification required"
+msgstr "التحقق الإضافي مطلوب"
 
 msgid "AesGcmCrypto requires a non-empty key."
 msgstr "يتطلب AesGcmCrypto مفتاحًا غير فارغ."
 
-msgid "Invalid key length for AesGcmCrypto. Expected {0} bytes, got {1}."
-msgstr "طول مفتاح غير صالح لـ AesGcmCrypto. المتوقع {0} بايت، تم الحصول على {1}."
+msgid "Authenticator App (TOTP)"
+msgstr "تطبيق المصادقة (TOTP)"
 
-msgid "Invalid IV length for AES-GCM."
-msgstr "طول IV غير صالح لـ AES-GCM."
+msgid "Authenticator app (TOTP)"
+msgstr "تطبيق المصادقة (TOTP)"
 
-msgid "Encryption failed using AesGcmCrypto."
-msgstr "فشل التشفير باستخدام AesGcmCrypto."
+msgid "Authenticator code"
+msgstr "رمز المصادقة"
 
-msgid "Invalid base64 payload for AesGcmCrypto."
-msgstr "حمولة base64 غير صالحة لـ AesGcmCrypto."
+msgid "Choose Verification Method"
+msgstr "اختيار طريقة التحقق"
 
-msgid "Invalid payload size for AesGcmCrypto."
-msgstr "حجم الحمولة غير صالح لـ AesGcmCrypto."
+msgid "Choose your verification method"
+msgstr "اختر طريقة التحقق الخاصة بك"
+
+msgid "Confirm"
+msgstr "تأكيد"
+
+msgid "Continue verification"
+msgstr "متابعة التحقق"
 
 msgid "Decryption failed using AesGcmCrypto."
 msgstr "فشل فك التشفير باستخدام AesGcmCrypto."
 
-msgid "OpenSSL cipher \"{0}\" is not supported."
-msgstr "شفرة OpenSSL \"{0}\" غير مدعومة."
+msgid "Decryption failed using SodiumCrypto."
+msgstr "فشل فك التشفير باستخدام SodiumCrypto."
 
-msgid "SodiumCrypto requires a non-empty key."
-msgstr "يتطلب SodiumCrypto مفتاحًا غير فارغ."
+msgid "Dummy SMS sent to {0}"
+msgstr "تم إرسال رسالة SMS تجريبية إلى {0}"
 
-msgid "Invalid key length for SodiumCrypto. Expected {0} bytes, got {1}."
-msgstr "طول مفتاح غير صالح لـ SodiumCrypto. المتوقع {0} بايت، تم الحصول على {1}."
+msgid "Email (one-time code)"
+msgstr "البريد الإلكتروني (رمز لمرة واحدة)"
 
-msgid "Encryption failed using SodiumCrypto."
-msgstr "فشل التشفير باستخدام SodiumCrypto."
+msgid "Email One-Time Code"
+msgstr "رمز بريد إلكتروني لمرة واحدة"
+
+msgid "Email Verification"
+msgstr "التحقق من البريد الإلكتروني"
+
+msgid "Encryption failed using AesGcmCrypto."
+msgstr "فشل التشفير باستخدام AesGcmCrypto."
+
+msgid "Enroll Authenticator"
+msgstr "تسجيل المصادق"
+
+msgid "Enroll authenticator"
+msgstr "تسجيل المصادق"
+
+msgid "Identity key is missing for OTP storage."
+msgstr "مفتاح الهوية مفقود لتخزين OTP."
+
+msgid "Invalid IV length for AES-GCM."
+msgstr "طول IV غير صالح لـ AES-GCM."
+
+msgid "Invalid base64 payload for AesGcmCrypto."
+msgstr "حمولة base64 غير صالحة لـ AesGcmCrypto."
 
 msgid "Invalid base64 payload for SodiumCrypto."
 msgstr "حمولة base64 غير صالحة لـ SodiumCrypto."
 
+msgid "Invalid key length for AesGcmCrypto. Expected {0} bytes, got {1}."
+msgstr "طول مفتاح غير صالح لـ AesGcmCrypto. المتوقع {0} بايت، تم الحصول على {1}."
+
+msgid "Invalid key length for SodiumCrypto. Expected {0} bytes, got {1}."
+msgstr "طول مفتاح غير صالح لـ SodiumCrypto. المتوقع {0} بايت، تم الحصول على {1}."
+
+msgid "Invalid payload size for AesGcmCrypto."
+msgstr "حجم الحمولة غير صالح لـ AesGcmCrypto."
+
 msgid "Invalid payload size for SodiumCrypto."
 msgstr "حجم الحمولة غير صالح لـ SodiumCrypto."
 
-msgid "Decryption failed using SodiumCrypto."
-msgstr "فشل فك التشفير باستخدام SodiumCrypto."
+msgid "Invalid transport class: {0}"
+msgstr "فئة نقل غير صالحة: {0}"
 
-msgid "Invalid base64 payload for Base64Crypto."
-msgstr "حمولة base64 غير صالحة لـ Base64Crypto."
+msgid "Invalid transport definition: {0}"
+msgstr "تعريف النقل غير صالح: {0}"
+
+msgid "Manual secret: {0}"
+msgstr "المفتاح السري اليدوي: {0}"
+
+msgid "No pending steps."
+msgstr "لا توجد خطوات معلقة."
+
+msgid "OTP rate limit exceeded."
+msgstr "تم تجاوز حد طلبات رمز OTP."
+
+msgid "OTP resend cooldown is active."
+msgstr "فترة الانتظار لإعادة إرسال OTP فعالة."
+
+msgid "OpenSSL cipher \"{0}\" is not supported."
+msgstr "شفرة OpenSSL \"{0}\" غير مدعومة."
+
+msgid "Pending steps:"
+msgstr "الخطوات المعلقة:"
+
+msgid "Please enter the verification code for: {0}"
+msgstr "يرجى إدخال رمز التحقق لـ: {0}"
+
+msgid "Please verify your email by visiting the link below:"
+msgstr "يرجى التحقق من بريدك الإلكتروني عبر الرابط أدناه:"
+
+msgid "QR data not available."
+msgstr "بيانات رمز QR غير متوفرة."
+
+msgid "SMS (one-time code)"
+msgstr "رسالة SMS (رمز لمرة واحدة)"
+
+msgid "SMS One-Time Code"
+msgstr "رمز SMS لمرة واحدة"
+
+msgid "Save"
+msgstr "حفظ"
+
+msgid "Scan the QR code in your authenticator app and confirm with a code."
+msgstr "امسح رمز QR في تطبيق المصادقة وأكد بالرمز."
+
+msgid "Select how you want to verify your identity on each login."
+msgstr "اختر كيفية التحقق من هويتك عند كل تسجيل دخول."
+
+msgid "Sodium extension is required for SodiumCrypto driver."
+msgstr "امتداد Sodium مطلوب لبرنامج التشغيل SodiumCrypto."
+
+msgid "Sodium extension is required for sodium crypto driver."
+msgstr "امتداد Sodium مطلوب لبرنامج تشغيل التشفير sodium."
+
+msgid "SodiumCrypto requires a non-empty key."
+msgstr "يتطلب SodiumCrypto مفتاحًا غير فارغ."
+
+msgid "Unknown crypto driver: {0}"
+msgstr "برنامج تشفير غير معروف: {0}"
+
+msgid "Unknown transport: {0}"
+msgstr "نقل غير معروف: {0}"
+
+msgid "Verification Pending"
+msgstr "التحقق معلق"
+
+msgid "Verification code"
+msgstr "رمز التحقق"
+
+msgid "Verification pending"
+msgstr "التحقق معلق"
+
+msgid "Verify"
+msgstr "تحقق"
+
+msgid "Your verification code is: {0}"
+msgstr "رمز التحقق الخاص بك هو: {0}"
+
+msgid "verification"
+msgstr "التحقق"

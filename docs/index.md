@@ -20,6 +20,7 @@ Central index for all cakephp-verification plugin documentation.
 | SMS OTP | [sms_verification.md](sms_verification.md) |
 | TOTP (authenticator app) | [totp_verification.md](totp_verification.md) |
 | Enable / disable individual steps | [verificator_enable_disable.md](verificator_enable_disable.md) |
+| Translations (shipped locales, overriding) | [translations.md](translations.md) |
 
 ## Integration
 

@@ -16,6 +16,7 @@ Email OTP, SMS OTP, and TOTP (authenticator apps).
 - Rate-limiting, lockout, and resend cooldown for OTP codes
 - `VerificationComponent` handles all controller logic (auto-start, verify, mark verified, redirect)
 - Works with integer and UUID user primary keys
+- Ships translations for 12 languages (see [docs/translations.md](docs/translations.md))
 
 ## Requirements
 

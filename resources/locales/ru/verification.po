@@ -4,71 +4,164 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: ru\n"
 
-msgid "Additional verification is required to proceed."
-msgstr "Для продолжения требуется дополнительная проверка."
+msgid "Additional Verification"
+msgstr "Дополнительная проверка"
 
-msgid "Invalid transport definition: {0}"
-msgstr "Неверное определение транспорта: {0}"
-
-msgid "Unknown transport: {0}"
-msgstr "Неизвестный транспорт: {0}"
-
-msgid "OTP resend cooldown is active."
-msgstr "Активна задержка повторной отправки OTP."
-
-msgid "Identity key is missing for OTP storage."
-msgstr "Отсутствует ключ идентичности для хранения OTP."
-
-msgid "Email One-Time Code"
-msgstr "Одноразовый код по email"
-
-msgid "SMS One-Time Code"
-msgstr "Одноразовый код по SMS"
-
-msgid "Authenticator App (TOTP)"
-msgstr "Приложение-аутентификатор (TOTP)"
+msgid "Additional verification required"
+msgstr "Требуется дополнительная проверка"
 
 msgid "AesGcmCrypto requires a non-empty key."
 msgstr "AesGcmCrypto требует непустой ключ."
 
-msgid "Invalid key length for AesGcmCrypto. Expected {0} bytes, got {1}."
-msgstr "Неверная длина ключа для AesGcmCrypto. Ожидалось {0} байт, получено {1}."
+msgid "Authenticator App (TOTP)"
+msgstr "Приложение-аутентификатор (TOTP)"
 
-msgid "Invalid IV length for AES-GCM."
-msgstr "Неверная длина IV для AES-GCM."
+msgid "Authenticator app (TOTP)"
+msgstr "Приложение-аутентификатор (TOTP)"
 
-msgid "Encryption failed using AesGcmCrypto."
-msgstr "Шифрование с AesGcmCrypto не удалось."
+msgid "Authenticator code"
+msgstr "Код аутентификатора"
 
-msgid "Invalid base64 payload for AesGcmCrypto."
-msgstr "Неверная base64‑нагрузка для AesGcmCrypto."
+msgid "Choose Verification Method"
+msgstr "Выбор способа проверки"
 
-msgid "Invalid payload size for AesGcmCrypto."
-msgstr "Неверный размер нагрузки для AesGcmCrypto."
+msgid "Choose your verification method"
+msgstr "Выберите способ проверки"
+
+msgid "Confirm"
+msgstr "Подтвердить"
+
+msgid "Continue verification"
+msgstr "Продолжить проверку"
 
 msgid "Decryption failed using AesGcmCrypto."
 msgstr "Расшифрование с AesGcmCrypto не удалось."
 
-msgid "OpenSSL cipher \"{0}\" is not supported."
-msgstr "Шифр OpenSSL \"{0}\" не поддерживается."
+msgid "Decryption failed using SodiumCrypto."
+msgstr "Расшифрование с SodiumCrypto не удалось."
 
-msgid "SodiumCrypto requires a non-empty key."
-msgstr "SodiumCrypto требует непустой ключ."
+msgid "Dummy SMS sent to {0}"
+msgstr "Тестовое SMS отправлено на {0}"
 
-msgid "Invalid key length for SodiumCrypto. Expected {0} bytes, got {1}."
-msgstr "Неверная длина ключа для SodiumCrypto. Ожидалось {0} байт, получено {1}."
+msgid "Email (one-time code)"
+msgstr "Эл. почта (одноразовый код)"
 
-msgid "Encryption failed using SodiumCrypto."
-msgstr "Шифрование с SodiumCrypto не удалось."
+msgid "Email One-Time Code"
+msgstr "Одноразовый код по email"
+
+msgid "Email Verification"
+msgstr "Проверка эл. почты"
+
+msgid "Encryption failed using AesGcmCrypto."
+msgstr "Шифрование с AesGcmCrypto не удалось."
+
+msgid "Enroll Authenticator"
+msgstr "Настройка аутентификатора"
+
+msgid "Enroll authenticator"
+msgstr "Настройка аутентификатора"
+
+msgid "Identity key is missing for OTP storage."
+msgstr "Отсутствует ключ идентичности для хранения OTP."
+
+msgid "Invalid IV length for AES-GCM."
+msgstr "Неверная длина IV для AES-GCM."
+
+msgid "Invalid base64 payload for AesGcmCrypto."
+msgstr "Неверная base64‑нагрузка для AesGcmCrypto."
 
 msgid "Invalid base64 payload for SodiumCrypto."
 msgstr "Неверная base64‑нагрузка для SodiumCrypto."
 
+msgid "Invalid key length for AesGcmCrypto. Expected {0} bytes, got {1}."
+msgstr "Неверная длина ключа для AesGcmCrypto. Ожидалось {0} байт, получено {1}."
+
+msgid "Invalid key length for SodiumCrypto. Expected {0} bytes, got {1}."
+msgstr "Неверная длина ключа для SodiumCrypto. Ожидалось {0} байт, получено {1}."
+
+msgid "Invalid payload size for AesGcmCrypto."
+msgstr "Неверный размер нагрузки для AesGcmCrypto."
+
 msgid "Invalid payload size for SodiumCrypto."
 msgstr "Неверный размер нагрузки для SodiumCrypto."
 
-msgid "Decryption failed using SodiumCrypto."
-msgstr "Расшифрование с SodiumCrypto не удалось."
+msgid "Invalid transport class: {0}"
+msgstr "Недопустимый класс транспорта: {0}"
 
-msgid "Invalid base64 payload for Base64Crypto."
-msgstr "Неверная base64‑нагрузка для Base64Crypto."
+msgid "Invalid transport definition: {0}"
+msgstr "Неверное определение транспорта: {0}"
+
+msgid "Manual secret: {0}"
+msgstr "Секрет для ручного ввода: {0}"
+
+msgid "No pending steps."
+msgstr "Нет ожидающих шагов."
+
+msgid "OTP rate limit exceeded."
+msgstr "Превышен лимит запросов OTP."
+
+msgid "OTP resend cooldown is active."
+msgstr "Активна задержка повторной отправки OTP."
+
+msgid "OpenSSL cipher \"{0}\" is not supported."
+msgstr "Шифр OpenSSL \"{0}\" не поддерживается."
+
+msgid "Pending steps:"
+msgstr "Ожидающие шаги:"
+
+msgid "Please enter the verification code for: {0}"
+msgstr "Введите код подтверждения для: {0}"
+
+msgid "Please verify your email by visiting the link below:"
+msgstr "Подтвердите свой адрес эл. почты, перейдя по ссылке ниже:"
+
+msgid "QR data not available."
+msgstr "Данные QR недоступны."
+
+msgid "SMS (one-time code)"
+msgstr "SMS (одноразовый код)"
+
+msgid "SMS One-Time Code"
+msgstr "Одноразовый код по SMS"
+
+msgid "Save"
+msgstr "Сохранить"
+
+msgid "Scan the QR code in your authenticator app and confirm with a code."
+msgstr "Отсканируйте QR-код в приложении-аутентификаторе и подтвердите кодом."
+
+msgid "Select how you want to verify your identity on each login."
+msgstr "Выберите, как подтверждать свою личность при каждом входе."
+
+msgid "Sodium extension is required for SodiumCrypto driver."
+msgstr "Для драйвера SodiumCrypto требуется расширение Sodium."
+
+msgid "Sodium extension is required for sodium crypto driver."
+msgstr "Для драйвера шифрования sodium требуется расширение Sodium."
+
+msgid "SodiumCrypto requires a non-empty key."
+msgstr "SodiumCrypto требует непустой ключ."
+
+msgid "Unknown crypto driver: {0}"
+msgstr "Неизвестный драйвер шифрования: {0}"
+
+msgid "Unknown transport: {0}"
+msgstr "Неизвестный транспорт: {0}"
+
+msgid "Verification Pending"
+msgstr "Проверка ожидается"
+
+msgid "Verification code"
+msgstr "Код подтверждения"
+
+msgid "Verification pending"
+msgstr "Проверка ожидается"
+
+msgid "Verify"
+msgstr "Подтвердить"
+
+msgid "Your verification code is: {0}"
+msgstr "Ваш код подтверждения: {0}"
+
+msgid "verification"
+msgstr "проверка"

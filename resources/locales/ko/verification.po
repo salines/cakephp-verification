@@ -4,71 +4,164 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: ko\n"
 
-msgid "Additional verification is required to proceed."
-msgstr "계속하려면 추가 인증이 필요합니다."
+msgid "Additional Verification"
+msgstr "추가 인증"
 
-msgid "Invalid transport definition: {0}"
-msgstr "잘못된 전송 정의: {0}"
-
-msgid "Unknown transport: {0}"
-msgstr "알 수 없는 전송: {0}"
-
-msgid "OTP resend cooldown is active."
-msgstr "OTP 재전송 쿨다운이 활성화되었습니다."
-
-msgid "Identity key is missing for OTP storage."
-msgstr "OTP 저장을 위한 식별 키가 없습니다."
-
-msgid "Email One-Time Code"
-msgstr "이메일 일회용 코드"
-
-msgid "SMS One-Time Code"
-msgstr "SMS 일회용 코드"
-
-msgid "Authenticator App (TOTP)"
-msgstr "인증 앱 (TOTP)"
+msgid "Additional verification required"
+msgstr "추가 인증이 필요합니다"
 
 msgid "AesGcmCrypto requires a non-empty key."
 msgstr "AesGcmCrypto에는 비어 있지 않은 키가 필요합니다."
 
-msgid "Invalid key length for AesGcmCrypto. Expected {0} bytes, got {1}."
-msgstr "AesGcmCrypto 키 길이가 잘못되었습니다. {0}바이트를 기대했지만 {1}바이트입니다."
+msgid "Authenticator App (TOTP)"
+msgstr "인증 앱 (TOTP)"
 
-msgid "Invalid IV length for AES-GCM."
-msgstr "AES-GCM IV 길이가 올바르지 않습니다."
+msgid "Authenticator app (TOTP)"
+msgstr "인증 앱 (TOTP)"
 
-msgid "Encryption failed using AesGcmCrypto."
-msgstr "AesGcmCrypto로 암호화에 실패했습니다."
+msgid "Authenticator code"
+msgstr "인증 코드"
 
-msgid "Invalid base64 payload for AesGcmCrypto."
-msgstr "AesGcmCrypto의 base64 페이로드가 올바르지 않습니다."
+msgid "Choose Verification Method"
+msgstr "인증 방법 선택"
 
-msgid "Invalid payload size for AesGcmCrypto."
-msgstr "AesGcmCrypto의 페이로드 크기가 올바르지 않습니다."
+msgid "Choose your verification method"
+msgstr "인증 방법을 선택하세요"
+
+msgid "Confirm"
+msgstr "확인"
+
+msgid "Continue verification"
+msgstr "인증 계속하기"
 
 msgid "Decryption failed using AesGcmCrypto."
 msgstr "AesGcmCrypto로 복호화에 실패했습니다."
 
-msgid "OpenSSL cipher \"{0}\" is not supported."
-msgstr "OpenSSL 암호 \"{0}\"는 지원되지 않습니다."
+msgid "Decryption failed using SodiumCrypto."
+msgstr "SodiumCrypto로 복호화에 실패했습니다."
 
-msgid "SodiumCrypto requires a non-empty key."
-msgstr "SodiumCrypto에는 비어 있지 않은 키가 필요합니다."
+msgid "Dummy SMS sent to {0}"
+msgstr "더미 SMS를 {0}(으)로 전송했습니다"
 
-msgid "Invalid key length for SodiumCrypto. Expected {0} bytes, got {1}."
-msgstr "SodiumCrypto 키 길이가 잘못되었습니다. {0}바이트를 기대했지만 {1}바이트입니다."
+msgid "Email (one-time code)"
+msgstr "이메일 (일회용 코드)"
 
-msgid "Encryption failed using SodiumCrypto."
-msgstr "SodiumCrypto로 암호화에 실패했습니다."
+msgid "Email One-Time Code"
+msgstr "이메일 일회용 코드"
+
+msgid "Email Verification"
+msgstr "이메일 인증"
+
+msgid "Encryption failed using AesGcmCrypto."
+msgstr "AesGcmCrypto로 암호화에 실패했습니다."
+
+msgid "Enroll Authenticator"
+msgstr "인증기 등록"
+
+msgid "Enroll authenticator"
+msgstr "인증기 등록"
+
+msgid "Identity key is missing for OTP storage."
+msgstr "OTP 저장을 위한 식별 키가 없습니다."
+
+msgid "Invalid IV length for AES-GCM."
+msgstr "AES-GCM IV 길이가 올바르지 않습니다."
+
+msgid "Invalid base64 payload for AesGcmCrypto."
+msgstr "AesGcmCrypto의 base64 페이로드가 올바르지 않습니다."
 
 msgid "Invalid base64 payload for SodiumCrypto."
 msgstr "SodiumCrypto의 base64 페이로드가 올바르지 않습니다."
 
+msgid "Invalid key length for AesGcmCrypto. Expected {0} bytes, got {1}."
+msgstr "AesGcmCrypto 키 길이가 잘못되었습니다. {0}바이트를 기대했지만 {1}바이트입니다."
+
+msgid "Invalid key length for SodiumCrypto. Expected {0} bytes, got {1}."
+msgstr "SodiumCrypto 키 길이가 잘못되었습니다. {0}바이트를 기대했지만 {1}바이트입니다."
+
+msgid "Invalid payload size for AesGcmCrypto."
+msgstr "AesGcmCrypto의 페이로드 크기가 올바르지 않습니다."
+
 msgid "Invalid payload size for SodiumCrypto."
 msgstr "SodiumCrypto의 페이로드 크기가 올바르지 않습니다."
 
-msgid "Decryption failed using SodiumCrypto."
-msgstr "SodiumCrypto로 복호화에 실패했습니다."
+msgid "Invalid transport class: {0}"
+msgstr "잘못된 전송 클래스: {0}"
 
-msgid "Invalid base64 payload for Base64Crypto."
-msgstr "Base64Crypto의 base64 페이로드가 올바르지 않습니다."
+msgid "Invalid transport definition: {0}"
+msgstr "잘못된 전송 정의: {0}"
+
+msgid "Manual secret: {0}"
+msgstr "수동 입력 비밀 키: {0}"
+
+msgid "No pending steps."
+msgstr "대기 중인 단계가 없습니다."
+
+msgid "OTP rate limit exceeded."
+msgstr "OTP 요청 한도를 초과했습니다."
+
+msgid "OTP resend cooldown is active."
+msgstr "OTP 재전송 쿨다운이 활성화되었습니다."
+
+msgid "OpenSSL cipher \"{0}\" is not supported."
+msgstr "OpenSSL 암호 \"{0}\"는 지원되지 않습니다."
+
+msgid "Pending steps:"
+msgstr "대기 중인 단계:"
+
+msgid "Please enter the verification code for: {0}"
+msgstr "{0}에 대한 인증 코드를 입력하세요"
+
+msgid "Please verify your email by visiting the link below:"
+msgstr "아래 링크를 방문하여 이메일을 인증해 주세요:"
+
+msgid "QR data not available."
+msgstr "QR 데이터를 사용할 수 없습니다."
+
+msgid "SMS (one-time code)"
+msgstr "SMS (일회용 코드)"
+
+msgid "SMS One-Time Code"
+msgstr "SMS 일회용 코드"
+
+msgid "Save"
+msgstr "저장"
+
+msgid "Scan the QR code in your authenticator app and confirm with a code."
+msgstr "인증 앱으로 QR 코드를 스캔하고 코드로 확인하세요."
+
+msgid "Select how you want to verify your identity on each login."
+msgstr "로그인할 때마다 본인 확인 방법을 선택하세요."
+
+msgid "Sodium extension is required for SodiumCrypto driver."
+msgstr "SodiumCrypto 드라이버에는 Sodium 확장이 필요합니다."
+
+msgid "Sodium extension is required for sodium crypto driver."
+msgstr "sodium 암호화 드라이버에는 Sodium 확장이 필요합니다."
+
+msgid "SodiumCrypto requires a non-empty key."
+msgstr "SodiumCrypto에는 비어 있지 않은 키가 필요합니다."
+
+msgid "Unknown crypto driver: {0}"
+msgstr "알 수 없는 암호화 드라이버: {0}"
+
+msgid "Unknown transport: {0}"
+msgstr "알 수 없는 전송: {0}"
+
+msgid "Verification Pending"
+msgstr "인증 대기 중"
+
+msgid "Verification code"
+msgstr "인증 코드"
+
+msgid "Verification pending"
+msgstr "인증 대기 중"
+
+msgid "Verify"
+msgstr "인증"
+
+msgid "Your verification code is: {0}"
+msgstr "인증 코드: {0}"
+
+msgid "verification"
+msgstr "인증"

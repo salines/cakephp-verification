@@ -5,6 +5,25 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Added
+
+- Default `templates/Users/choose_verification.php` template (override in app),
+  matching the other shipped templates.
+- Shipped translations now load out of the box: the plugin registers an I18n
+  loader for the `verification` domain in its bootstrap (the domain name does
+  not match the plugin name, so CakePHP's convention never found the files).
+  An app-level `resources/locales/<locale>/verification.po` still overrides
+  the plugin's file entirely, as per standard CakePHP behavior.
+  New [translations guide](docs/translations.md).
+
+### Fixed
+
+- Locale files for all 12 languages regenerated: ~30 missing strings added
+  (all template strings, OTP rate-limit and crypto messages), unused entries
+  removed. Existing translations were preserved.
+
 ## [1.1.2] - 2026-07-12
 
 ### Fixed

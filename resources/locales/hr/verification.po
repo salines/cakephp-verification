@@ -4,71 +4,164 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: hr\n"
 
-msgid "Additional verification is required to proceed."
-msgstr "Potrebna je dodatna verifikacija za nastavak."
+msgid "Additional Verification"
+msgstr "Dodatna verifikacija"
 
-msgid "Invalid transport definition: {0}"
-msgstr "Neispravna definicija transporta: {0}"
-
-msgid "Unknown transport: {0}"
-msgstr "Nepoznat transport: {0}"
-
-msgid "OTP resend cooldown is active."
-msgstr "OTP cooldown za ponovno slanje je aktivan."
-
-msgid "Identity key is missing for OTP storage."
-msgstr "Nedostaje identitetski kljuc za OTP pohranu."
-
-msgid "Email One-Time Code"
-msgstr "Email jednokratni kod"
-
-msgid "SMS One-Time Code"
-msgstr "SMS jednokratni kod"
-
-msgid "Authenticator App (TOTP)"
-msgstr "Authenticator aplikacija (TOTP)"
+msgid "Additional verification required"
+msgstr "Potrebna je dodatna verifikacija"
 
 msgid "AesGcmCrypto requires a non-empty key."
 msgstr "AesGcmCrypto zahtijeva ne-prazan kljuc."
 
-msgid "Invalid key length for AesGcmCrypto. Expected {0} bytes, got {1}."
-msgstr "Neispravna duljina kljuca za AesGcmCrypto. Ocekivano {0} bajtova, dobiveno {1}."
+msgid "Authenticator App (TOTP)"
+msgstr "Authenticator aplikacija (TOTP)"
 
-msgid "Invalid IV length for AES-GCM."
-msgstr "Neispravna duljina IV za AES-GCM."
+msgid "Authenticator app (TOTP)"
+msgstr "Aplikacija za autentifikaciju (TOTP)"
 
-msgid "Encryption failed using AesGcmCrypto."
-msgstr "Enkripcija nije uspjela koristeci AesGcmCrypto."
+msgid "Authenticator code"
+msgstr "Kod za autentifikaciju"
 
-msgid "Invalid base64 payload for AesGcmCrypto."
-msgstr "Neispravan base64 payload za AesGcmCrypto."
+msgid "Choose Verification Method"
+msgstr "Odabir načina verifikacije"
 
-msgid "Invalid payload size for AesGcmCrypto."
-msgstr "Neispravna velicina payload-a za AesGcmCrypto."
+msgid "Choose your verification method"
+msgstr "Odaberite način verifikacije"
+
+msgid "Confirm"
+msgstr "Potvrdi"
+
+msgid "Continue verification"
+msgstr "Nastavi verifikaciju"
 
 msgid "Decryption failed using AesGcmCrypto."
 msgstr "Dekripcija nije uspjela koristeci AesGcmCrypto."
 
-msgid "OpenSSL cipher \"{0}\" is not supported."
-msgstr "OpenSSL cipher \"{0}\" nije podrzan."
+msgid "Decryption failed using SodiumCrypto."
+msgstr "Dekripcija nije uspjela koristeci SodiumCrypto."
 
-msgid "SodiumCrypto requires a non-empty key."
-msgstr "SodiumCrypto zahtijeva ne-prazan kljuc."
+msgid "Dummy SMS sent to {0}"
+msgstr "Testni SMS poslan na {0}"
 
-msgid "Invalid key length for SodiumCrypto. Expected {0} bytes, got {1}."
-msgstr "Neispravna duljina kljuca za SodiumCrypto. Ocekivano {0} bajtova, dobiveno {1}."
+msgid "Email (one-time code)"
+msgstr "E-mail (jednokratni kod)"
 
-msgid "Encryption failed using SodiumCrypto."
-msgstr "Enkripcija nije uspjela koristeci SodiumCrypto."
+msgid "Email One-Time Code"
+msgstr "Email jednokratni kod"
+
+msgid "Email Verification"
+msgstr "Verifikacija e-maila"
+
+msgid "Encryption failed using AesGcmCrypto."
+msgstr "Enkripcija nije uspjela koristeci AesGcmCrypto."
+
+msgid "Enroll Authenticator"
+msgstr "Postavljanje autentifikatora"
+
+msgid "Enroll authenticator"
+msgstr "Postavljanje autentifikatora"
+
+msgid "Identity key is missing for OTP storage."
+msgstr "Nedostaje identitetski kljuc za OTP pohranu."
+
+msgid "Invalid IV length for AES-GCM."
+msgstr "Neispravna duljina IV za AES-GCM."
+
+msgid "Invalid base64 payload for AesGcmCrypto."
+msgstr "Neispravan base64 payload za AesGcmCrypto."
 
 msgid "Invalid base64 payload for SodiumCrypto."
 msgstr "Neispravan base64 payload za SodiumCrypto."
 
+msgid "Invalid key length for AesGcmCrypto. Expected {0} bytes, got {1}."
+msgstr "Neispravna duljina kljuca za AesGcmCrypto. Ocekivano {0} bajtova, dobiveno {1}."
+
+msgid "Invalid key length for SodiumCrypto. Expected {0} bytes, got {1}."
+msgstr "Neispravna duljina kljuca za SodiumCrypto. Ocekivano {0} bajtova, dobiveno {1}."
+
+msgid "Invalid payload size for AesGcmCrypto."
+msgstr "Neispravna velicina payload-a za AesGcmCrypto."
+
 msgid "Invalid payload size for SodiumCrypto."
 msgstr "Neispravna velicina payload-a za SodiumCrypto."
 
-msgid "Decryption failed using SodiumCrypto."
-msgstr "Dekripcija nije uspjela koristeci SodiumCrypto."
+msgid "Invalid transport class: {0}"
+msgstr "Neispravna transport klasa: {0}"
 
-msgid "Invalid base64 payload for Base64Crypto."
-msgstr "Neispravan base64 payload za Base64Crypto."
+msgid "Invalid transport definition: {0}"
+msgstr "Neispravna definicija transporta: {0}"
+
+msgid "Manual secret: {0}"
+msgstr "Ručni tajni ključ: {0}"
+
+msgid "No pending steps."
+msgstr "Nema koraka na čekanju."
+
+msgid "OTP rate limit exceeded."
+msgstr "Prekoračeno ograničenje broja OTP zahtjeva."
+
+msgid "OTP resend cooldown is active."
+msgstr "OTP cooldown za ponovno slanje je aktivan."
+
+msgid "OpenSSL cipher \"{0}\" is not supported."
+msgstr "OpenSSL cipher \"{0}\" nije podrzan."
+
+msgid "Pending steps:"
+msgstr "Koraci na čekanju:"
+
+msgid "Please enter the verification code for: {0}"
+msgstr "Unesite verifikacijski kod za: {0}"
+
+msgid "Please verify your email by visiting the link below:"
+msgstr "Potvrdite svoju e-mail adresu putem poveznice u nastavku:"
+
+msgid "QR data not available."
+msgstr "QR podaci nisu dostupni."
+
+msgid "SMS (one-time code)"
+msgstr "SMS (jednokratni kod)"
+
+msgid "SMS One-Time Code"
+msgstr "SMS jednokratni kod"
+
+msgid "Save"
+msgstr "Spremi"
+
+msgid "Scan the QR code in your authenticator app and confirm with a code."
+msgstr "Skenirajte QR kod u aplikaciji za autentifikaciju i potvrdite kodom."
+
+msgid "Select how you want to verify your identity on each login."
+msgstr "Odaberite kako želite potvrditi svoj identitet pri svakoj prijavi."
+
+msgid "Sodium extension is required for SodiumCrypto driver."
+msgstr "Sodium ekstenzija je potrebna za SodiumCrypto driver."
+
+msgid "Sodium extension is required for sodium crypto driver."
+msgstr "Sodium ekstenzija je potrebna za sodium crypto driver."
+
+msgid "SodiumCrypto requires a non-empty key."
+msgstr "SodiumCrypto zahtijeva ne-prazan kljuc."
+
+msgid "Unknown crypto driver: {0}"
+msgstr "Nepoznat crypto driver: {0}"
+
+msgid "Unknown transport: {0}"
+msgstr "Nepoznat transport: {0}"
+
+msgid "Verification Pending"
+msgstr "Verifikacija na čekanju"
+
+msgid "Verification code"
+msgstr "Verifikacijski kod"
+
+msgid "Verification pending"
+msgstr "Verifikacija na čekanju"
+
+msgid "Verify"
+msgstr "Potvrdi"
+
+msgid "Your verification code is: {0}"
+msgstr "Vaš verifikacijski kod je: {0}"
+
+msgid "verification"
+msgstr "verifikacija"

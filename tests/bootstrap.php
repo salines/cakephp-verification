@@ -45,14 +45,13 @@ if (!defined('CONFIG')) {
 // Register plugin under its CakePHP name so Configure::load('Verification.verification') works
 Plugin::getCollection()->add(new CakeVerificationPlugin(['path' => $pluginRoot . '/']));
 
-// Minimal Cake bootstrap for plugin tests
-require $pluginRoot . '/config/bootstrap.php';
-
-// Ensure a default app namespace
-if (!Configure::check('App.namespace')) {
-    Configure::write('App.namespace', 'App');
+// Cache must exist before the plugin bootstrap (I18n::config touches it).
+if (!Cache::getConfig('_cake_core_')) {
+    Cache::setConfig('_cake_core_', [
+        'className' => 'Array',
+        'prefix' => 'verification_tests_core_',
+    ]);
 }
-
 if (!Cache::getConfig('_cake_translations_')) {
     Cache::setConfig('_cake_translations_', [
         'className' => 'Array',
@@ -64,6 +63,14 @@ if (!Cache::getConfig('default')) {
         'className' => 'Array',
         'prefix' => 'verification_tests_default_',
     ]);
+}
+
+// Minimal Cake bootstrap for plugin tests
+require $pluginRoot . '/config/bootstrap.php';
+
+// Ensure a default app namespace
+if (!Configure::check('App.namespace')) {
+    Configure::write('App.namespace', 'App');
 }
 
 Router::reload();

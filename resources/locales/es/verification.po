@@ -4,71 +4,164 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: es\n"
 
-msgid "Additional verification is required to proceed."
-msgstr "Se requiere verificación adicional para continuar."
+msgid "Additional Verification"
+msgstr "Verificación adicional"
 
-msgid "Invalid transport definition: {0}"
-msgstr "Definición de transporte inválida: {0}"
-
-msgid "Unknown transport: {0}"
-msgstr "Transporte desconocido: {0}"
-
-msgid "OTP resend cooldown is active."
-msgstr "El tiempo de espera para reenviar OTP está activo."
-
-msgid "Identity key is missing for OTP storage."
-msgstr "Falta la clave de identidad para el almacenamiento de OTP."
-
-msgid "Email One-Time Code"
-msgstr "Código de un solo uso por correo"
-
-msgid "SMS One-Time Code"
-msgstr "Código de un solo uso por SMS"
-
-msgid "Authenticator App (TOTP)"
-msgstr "Aplicación autenticadora (TOTP)"
+msgid "Additional verification required"
+msgstr "Se requiere verificación adicional"
 
 msgid "AesGcmCrypto requires a non-empty key."
 msgstr "AesGcmCrypto requiere una clave no vacía."
 
-msgid "Invalid key length for AesGcmCrypto. Expected {0} bytes, got {1}."
-msgstr "Longitud de clave inválida para AesGcmCrypto. Se esperaban {0} bytes, se obtuvieron {1}."
+msgid "Authenticator App (TOTP)"
+msgstr "Aplicación autenticadora (TOTP)"
 
-msgid "Invalid IV length for AES-GCM."
-msgstr "Longitud de IV inválida para AES-GCM."
+msgid "Authenticator app (TOTP)"
+msgstr "Aplicación de autenticación (TOTP)"
 
-msgid "Encryption failed using AesGcmCrypto."
-msgstr "Falló el cifrado usando AesGcmCrypto."
+msgid "Authenticator code"
+msgstr "Código de autenticación"
 
-msgid "Invalid base64 payload for AesGcmCrypto."
-msgstr "Carga base64 inválida para AesGcmCrypto."
+msgid "Choose Verification Method"
+msgstr "Elegir método de verificación"
 
-msgid "Invalid payload size for AesGcmCrypto."
-msgstr "Tamaño de carga inválido para AesGcmCrypto."
+msgid "Choose your verification method"
+msgstr "Elija su método de verificación"
+
+msgid "Confirm"
+msgstr "Confirmar"
+
+msgid "Continue verification"
+msgstr "Continuar verificación"
 
 msgid "Decryption failed using AesGcmCrypto."
 msgstr "Falló el descifrado usando AesGcmCrypto."
 
-msgid "OpenSSL cipher \"{0}\" is not supported."
-msgstr "El cifrado OpenSSL \"{0}\" no es compatible."
+msgid "Decryption failed using SodiumCrypto."
+msgstr "Falló el descifrado usando SodiumCrypto."
 
-msgid "SodiumCrypto requires a non-empty key."
-msgstr "SodiumCrypto requiere una clave no vacía."
+msgid "Dummy SMS sent to {0}"
+msgstr "SMS de prueba enviado a {0}"
 
-msgid "Invalid key length for SodiumCrypto. Expected {0} bytes, got {1}."
-msgstr "Longitud de clave inválida para SodiumCrypto. Se esperaban {0} bytes, se obtuvieron {1}."
+msgid "Email (one-time code)"
+msgstr "Correo electrónico (código de un solo uso)"
 
-msgid "Encryption failed using SodiumCrypto."
-msgstr "Falló el cifrado usando SodiumCrypto."
+msgid "Email One-Time Code"
+msgstr "Código de un solo uso por correo"
+
+msgid "Email Verification"
+msgstr "Verificación de correo electrónico"
+
+msgid "Encryption failed using AesGcmCrypto."
+msgstr "Falló el cifrado usando AesGcmCrypto."
+
+msgid "Enroll Authenticator"
+msgstr "Registrar autenticador"
+
+msgid "Enroll authenticator"
+msgstr "Registrar autenticador"
+
+msgid "Identity key is missing for OTP storage."
+msgstr "Falta la clave de identidad para el almacenamiento de OTP."
+
+msgid "Invalid IV length for AES-GCM."
+msgstr "Longitud de IV inválida para AES-GCM."
+
+msgid "Invalid base64 payload for AesGcmCrypto."
+msgstr "Carga base64 inválida para AesGcmCrypto."
 
 msgid "Invalid base64 payload for SodiumCrypto."
 msgstr "Carga base64 inválida para SodiumCrypto."
 
+msgid "Invalid key length for AesGcmCrypto. Expected {0} bytes, got {1}."
+msgstr "Longitud de clave inválida para AesGcmCrypto. Se esperaban {0} bytes, se obtuvieron {1}."
+
+msgid "Invalid key length for SodiumCrypto. Expected {0} bytes, got {1}."
+msgstr "Longitud de clave inválida para SodiumCrypto. Se esperaban {0} bytes, se obtuvieron {1}."
+
+msgid "Invalid payload size for AesGcmCrypto."
+msgstr "Tamaño de carga inválido para AesGcmCrypto."
+
 msgid "Invalid payload size for SodiumCrypto."
 msgstr "Tamaño de carga inválido para SodiumCrypto."
 
-msgid "Decryption failed using SodiumCrypto."
-msgstr "Falló el descifrado usando SodiumCrypto."
+msgid "Invalid transport class: {0}"
+msgstr "Clase de transporte inválida: {0}"
 
-msgid "Invalid base64 payload for Base64Crypto."
-msgstr "Carga base64 inválida para Base64Crypto."
+msgid "Invalid transport definition: {0}"
+msgstr "Definición de transporte inválida: {0}"
+
+msgid "Manual secret: {0}"
+msgstr "Clave manual: {0}"
+
+msgid "No pending steps."
+msgstr "No hay pasos pendientes."
+
+msgid "OTP rate limit exceeded."
+msgstr "Límite de solicitudes de OTP excedido."
+
+msgid "OTP resend cooldown is active."
+msgstr "El tiempo de espera para reenviar OTP está activo."
+
+msgid "OpenSSL cipher \"{0}\" is not supported."
+msgstr "El cifrado OpenSSL \"{0}\" no es compatible."
+
+msgid "Pending steps:"
+msgstr "Pasos pendientes:"
+
+msgid "Please enter the verification code for: {0}"
+msgstr "Introduzca el código de verificación para: {0}"
+
+msgid "Please verify your email by visiting the link below:"
+msgstr "Verifique su correo electrónico visitando el siguiente enlace:"
+
+msgid "QR data not available."
+msgstr "Datos QR no disponibles."
+
+msgid "SMS (one-time code)"
+msgstr "SMS (código de un solo uso)"
+
+msgid "SMS One-Time Code"
+msgstr "Código de un solo uso por SMS"
+
+msgid "Save"
+msgstr "Guardar"
+
+msgid "Scan the QR code in your authenticator app and confirm with a code."
+msgstr "Escanee el código QR con su aplicación de autenticación y confirme con un código."
+
+msgid "Select how you want to verify your identity on each login."
+msgstr "Seleccione cómo desea verificar su identidad en cada inicio de sesión."
+
+msgid "Sodium extension is required for SodiumCrypto driver."
+msgstr "La extensión Sodium es necesaria para el controlador SodiumCrypto."
+
+msgid "Sodium extension is required for sodium crypto driver."
+msgstr "La extensión Sodium es necesaria para el controlador de cifrado sodium."
+
+msgid "SodiumCrypto requires a non-empty key."
+msgstr "SodiumCrypto requiere una clave no vacía."
+
+msgid "Unknown crypto driver: {0}"
+msgstr "Controlador de cifrado desconocido: {0}"
+
+msgid "Unknown transport: {0}"
+msgstr "Transporte desconocido: {0}"
+
+msgid "Verification Pending"
+msgstr "Verificación pendiente"
+
+msgid "Verification code"
+msgstr "Código de verificación"
+
+msgid "Verification pending"
+msgstr "Verificación pendiente"
+
+msgid "Verify"
+msgstr "Verificar"
+
+msgid "Your verification code is: {0}"
+msgstr "Su código de verificación es: {0}"
+
+msgid "verification"
+msgstr "verificación"

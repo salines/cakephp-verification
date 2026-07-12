@@ -3,6 +3,9 @@ declare(strict_types=1);
 
 use Cake\Core\Configure;
 use Cake\Core\Configure\Engine\PhpConfig;
+use Cake\I18n\I18n;
+use Cake\I18n\MessagesFileLoader;
+use Cake\I18n\Package;
 
 // Snapshot of any app-provided Verification config (loaded before the plugin boots).
 $appConfig = (array)Configure::read('Verification');
@@ -137,3 +140,19 @@ $config['db']['users']['columns'] += [
 ];
 
 Configure::write('Verification', $config);
+
+/**
+ * 5) Translations. The plugin is named CakeVerification but messages use the
+ * "verification" domain, so CakePHP's plugin-name convention never finds the
+ * shipped locale files on its own. Register a loader for the domain:
+ * an app-level resources/locales/<locale>/verification.po wins, the plugin
+ * files are the fallback.
+ */
+I18n::config('verification', function (string $domain, string $locale): Package {
+    // MessagesFileLoader searches the app's resources/locales first and the
+    // plugin's second, so an app-level verification.po overrides the shipped
+    // file — the same convention CakePHP uses for plugin-named domains.
+    $package = (new MessagesFileLoader('CakeVerification.verification', $locale))();
+
+    return $package instanceof Package ? $package : new Package('default');
+});
